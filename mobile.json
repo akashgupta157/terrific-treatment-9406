@@ -1,0 +1,162 @@
+[
+    {
+        "id":1,
+        "name":"Apple iPhone 14 Plus 256 GB, Starlight",
+        "price":"99,900.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyNDAyOHxpbWFnZS9qcGVnfGltYWdlcy9oMjgvaDAzLzk4OTA1NDQ5MTAzNjYuanBnfDYxN2YzOTY3M2ZmMTZmOTA4YWViOGNkMTRmMWE3MTNkNzYzYjU5OTRlMjNiODA0ZTFkOTU3NWEzZDkyMzc2ZDg",
+        "brand":"Apple"
+    },
+    {
+        "id":2,
+        "name":"Apple iPhone 13 128 GB, Blue, 5G Enabled Phone",
+        "price":"69,900.00",
+        "rating":"⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Apple-iPhone-13-Smartphones-491997702-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1NTA2NXxpbWFnZS9qcGVnfGltYWdlcy9oZGIvaDUzLzk4NzgxMDI4MDI0NjIuanBnfDEzY2UxMTNmZjQ4MGM2MmRjY2U2NGNmZDJhNjhkZDM3YmJkOThhYjhkZWViMDJjNjYyZjQyZjYwYjM4NzAyZTA",
+        "brand":"Apple"
+    },
+    {
+        "id":3,
+        "name":"Apple iPhone 12 64 GB, Black, 5G Enabled Phone",
+        "price":"56,900.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Apple-iPhone12-Smartphones-491901528-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzMjgwN3xpbWFnZS9qcGVnfGltYWdlcy9oM2YvaGQ4Lzk2NzU4Njg4MzE3NzQuanBnfDI5ZmE0NzA5MjhmYzQ1MTU2ZGM5MmY2YzgxM2VjY2FhMjlhZDVlMzRjMDhkODg5NThhZjA1Y2Q0ZTBjY2Y2NzE",
+        "brand":"Apple"
+    },
+    {
+        "id":4,
+        "name":"Mi 10T 128 GB, 6 GB RAM, Cosmic Black, Mobile Phone",
+        "price":"32,999.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Mi-Mi-10T-Smartphones-491901514-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MTY2NXxpbWFnZS9qcGVnfGltYWdlcy9oMzkvaGI0Lzk0MDcwNjYzNDE0MDYuanBnfDEwMzMyM2Y5ODhkM2FhYzRlZjc0NzY1YjBlNDYyNzUwNzAzYTJmMGNkZDIxMzJlMDE3NGU3MWJmYTAzN2Q0ZTA",
+        "brand":"Mi"
+    },
+    {
+        "id":5,
+        "name":"realme C11 2021 64 GB, 4 GB RAM, Cool Blue, Mobile Phone",
+        "price":"8,599.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/realme-C11-2021-Smart-Phones-491997602-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyODI0NXxpbWFnZS9qcGVnfGltYWdlcy9oZDUvaDQ2Lzk2Mjg3NjQ2Njc5MzQuanBnfGM2OWRhZjVkMGRjMTQ2MDAxNmQwN2NkMmRmMTc5NTc5NjExYzg0OTVhZDA5ZTUzMDdiNmVlZTkzMTIxMmU3Yjg",
+        "brand":"Realme"
+    },
+    {
+        "id":6,
+        "name":"Samsung Galaxy S20 FE 5G 128 GB, 8 GB RAM, Cloud Lavender, Mobile Phone",
+        "price":"39,079.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Samsung-S20-FE-Smart-Phones-491947347-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MDk3OXxpbWFnZS9qcGVnfGltYWdlcy9oM2QvaGY3Lzk1MTE2MzU2ODEzMTAuanBnfDliOGZiZDMyODg1MTcwYzcxMjcwMDZiOTY4MzY5MGZlMGQ2Y2YwMWNlMzM2ZjA1ZTk5OWNhNjQzMDM4ODBmYjU",
+        "brand":"Samsung"
+    },
+    {
+        "id":7,
+        "name":"Samsung Galaxy A03s 32 GB, 3 GB RAM, Blue, Mobile Phone",
+        "price":"9,999.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Samsung-Galaxy-A03s-Smartphone-491997511-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1Njc1M3xpbWFnZS9qcGVnfGltYWdlcy9oZWYvaDRhLzk2MjM1ODQ3NjgwMzAuanBnfDk3NTE3NjMxMDFkNWJjYTczYWY4NDY5MzNkZTUxNTYzMzM3ZjQ5MWIxODdhNGM5OWU2ZTRhYzhkZTMzMjEyNzc",
+        "brand":"Samsung"
+    },
+    {
+        "id":8,
+        "name":"Motorola G40 Fusion 128 GB,6 GB RAM, Frosted Champagne Smartphone",
+        "price":"16,499.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/MOTOROLA-G40-Smartphone-492849106-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMDAzMXxpbWFnZS9qcGVnfGltYWdlcy9oMTMvaGU5Lzk4MTI0NDI1MTM0MzguanBnfGM4OTc5YmNiZTg3ZmVlNDdkMDQxNDQ2MDQyZTY5MWYyM2ViODM5NTU2ZGQ4ZjUzM2VlZDVmNzllNGEzMTNjNGE",
+        "brand":"Motorola"
+    },
+    {
+        "id":9,
+        "name":"Apple iPhone SE 2022 64 GB, Midnight",
+        "price":"43,900.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Apple-iPhone-SE-2022-492849492-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MDU2MnxpbWFnZS9qcGVnfGltYWdlcy9oZTQvaDY2Lzk3ODgwNzgwMzA4NzguanBnfGVlYzU3ZWQ2YmRjNTI0NDI2YTM3ZjM1MGFhNTU5YTQwY2JkMTk2YjM1MDJiYmViNzFjMzc2MzZhNWQ5NjEzYTc",
+        "brand":"Apple"
+    },
+    {
+        "id":10,
+        "name":"OPPO A76 128 GB, 6 GB RAM, Glowing Black, Mobile Phone",
+        "price":"16,490.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/OPPO-A76-Smartphone-492849462-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2MjgzMnxpbWFnZS9wbmd8aW1hZ2VzL2g4Zi9oZGEvOTg4MDM2NTY5NTAwNi5wbmd8OTBlMzJhOGY3MTJlMWM4MmJmZmQ5MzNlZDU0NjUxNzA2NjZhNDQ0N2UxMmJmODkwNDQ4YzViNzEzYmNiZmZjNw",
+        "brand":"OPPO"
+    },
+    {
+        "id":1,
+        "name":"Apple iPhone 14 Plus 256 GB, Starlight",
+        "price":"99,900.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyNDAyOHxpbWFnZS9qcGVnfGltYWdlcy9oMjgvaDAzLzk4OTA1NDQ5MTAzNjYuanBnfDYxN2YzOTY3M2ZmMTZmOTA4YWViOGNkMTRmMWE3MTNkNzYzYjU5OTRlMjNiODA0ZTFkOTU3NWEzZDkyMzc2ZDg",
+        "brand":"Apple"
+    },
+    {
+        "id":2,
+        "name":"Apple iPhone 13 128 GB, Blue, 5G Enabled Phone",
+        "price":"69,900.00",
+        "rating":"⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Apple-iPhone-13-Smartphones-491997702-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1NTA2NXxpbWFnZS9qcGVnfGltYWdlcy9oZGIvaDUzLzk4NzgxMDI4MDI0NjIuanBnfDEzY2UxMTNmZjQ4MGM2MmRjY2U2NGNmZDJhNjhkZDM3YmJkOThhYjhkZWViMDJjNjYyZjQyZjYwYjM4NzAyZTA",
+        "brand":"Apple"
+    },
+    {
+        "id":3,
+        "name":"Apple iPhone 12 64 GB, Black, 5G Enabled Phone",
+        "price":"56,900.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Apple-iPhone12-Smartphones-491901528-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzMjgwN3xpbWFnZS9qcGVnfGltYWdlcy9oM2YvaGQ4Lzk2NzU4Njg4MzE3NzQuanBnfDI5ZmE0NzA5MjhmYzQ1MTU2ZGM5MmY2YzgxM2VjY2FhMjlhZDVlMzRjMDhkODg5NThhZjA1Y2Q0ZTBjY2Y2NzE",
+        "brand":"Apple"
+    },
+    {
+        "id":4,
+        "name":"Mi 10T 128 GB, 6 GB RAM, Cosmic Black, Mobile Phone",
+        "price":"32,999.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Mi-Mi-10T-Smartphones-491901514-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MTY2NXxpbWFnZS9qcGVnfGltYWdlcy9oMzkvaGI0Lzk0MDcwNjYzNDE0MDYuanBnfDEwMzMyM2Y5ODhkM2FhYzRlZjc0NzY1YjBlNDYyNzUwNzAzYTJmMGNkZDIxMzJlMDE3NGU3MWJmYTAzN2Q0ZTA",
+        "brand":"Mi"
+    },
+    {
+        "id":5,
+        "name":"realme C11 2021 64 GB, 4 GB RAM, Cool Blue, Mobile Phone",
+        "price":"8,599.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/realme-C11-2021-Smart-Phones-491997602-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyODI0NXxpbWFnZS9qcGVnfGltYWdlcy9oZDUvaDQ2Lzk2Mjg3NjQ2Njc5MzQuanBnfGM2OWRhZjVkMGRjMTQ2MDAxNmQwN2NkMmRmMTc5NTc5NjExYzg0OTVhZDA5ZTUzMDdiNmVlZTkzMTIxMmU3Yjg",
+        "brand":"Realme"
+    },
+    {
+        "id":6,
+        "name":"Samsung Galaxy S20 FE 5G 128 GB, 8 GB RAM, Cloud Lavender, Mobile Phone",
+        "price":"39,079.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Samsung-S20-FE-Smart-Phones-491947347-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MDk3OXxpbWFnZS9qcGVnfGltYWdlcy9oM2QvaGY3Lzk1MTE2MzU2ODEzMTAuanBnfDliOGZiZDMyODg1MTcwYzcxMjcwMDZiOTY4MzY5MGZlMGQ2Y2YwMWNlMzM2ZjA1ZTk5OWNhNjQzMDM4ODBmYjU",
+        "brand":"Samsung"
+    },
+    {
+        "id":7,
+        "name":"Samsung Galaxy A03s 32 GB, 3 GB RAM, Blue, Mobile Phone",
+        "price":"9,999.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Samsung-Galaxy-A03s-Smartphone-491997511-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1Njc1M3xpbWFnZS9qcGVnfGltYWdlcy9oZWYvaDRhLzk2MjM1ODQ3NjgwMzAuanBnfDk3NTE3NjMxMDFkNWJjYTczYWY4NDY5MzNkZTUxNTYzMzM3ZjQ5MWIxODdhNGM5OWU2ZTRhYzhkZTMzMjEyNzc",
+        "brand":"Samsung"
+    },
+    {
+        "id":8,
+        "name":"Motorola G40 Fusion 128 GB,6 GB RAM, Frosted Champagne Smartphone",
+        "price":"16,499.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/MOTOROLA-G40-Smartphone-492849106-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMDAzMXxpbWFnZS9qcGVnfGltYWdlcy9oMTMvaGU5Lzk4MTI0NDI1MTM0MzguanBnfGM4OTc5YmNiZTg3ZmVlNDdkMDQxNDQ2MDQyZTY5MWYyM2ViODM5NTU2ZGQ4ZjUzM2VlZDVmNzllNGEzMTNjNGE",
+        "brand":"Motorola"
+    },
+    {
+        "id":9,
+        "name":"Apple iPhone SE 2022 64 GB, Midnight",
+        "price":"43,900.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/Apple-iPhone-SE-2022-492849492-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MDU2MnxpbWFnZS9qcGVnfGltYWdlcy9oZTQvaDY2Lzk3ODgwNzgwMzA4NzguanBnfGVlYzU3ZWQ2YmRjNTI0NDI2YTM3ZjM1MGFhNTU5YTQwY2JkMTk2YjM1MDJiYmViNzFjMzc2MzZhNWQ5NjEzYTc",
+        "brand":"Apple"
+    },
+    {
+        "id":10,
+        "name":"OPPO A76 128 GB, 6 GB RAM, Glowing Black, Mobile Phone",
+        "price":"16,490.00",
+        "rating":"⭐⭐⭐⭐",
+        "img":"https://www.reliancedigital.in/medias/OPPO-A76-Smartphone-492849462-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2MjgzMnxpbWFnZS9wbmd8aW1hZ2VzL2g4Zi9oZGEvOTg4MDM2NTY5NTAwNi5wbmd8OTBlMzJhOGY3MTJlMWM4MmJmZmQ5MzNlZDU0NjUxNzA2NjZhNDQ0N2UxMmJmODkwNDQ4YzViNzEzYmNiZmZjNw",
+        "brand":"OPPO"
+    }
+]

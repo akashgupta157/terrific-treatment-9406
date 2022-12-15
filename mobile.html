@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Digital</title>
+    <link rel="stylesheet" href="./mobile.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/Screenshot (128).png">
+
+</head>
+<body>
+    <nav id="nav2" style="position: sticky;top:0px;">
+        <button style="border: 0;background-color: #E42529;padding-bottom: 5px;"><a href="./index.html"><img src="./img/Screenshot (128).png" alt="" width="150px"> </a></button>
+        <form action="">
+            <input style="width: 100%;font-size: 95%;" type="text" placeholder="Find your favorite products">
+            <button><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-18.png" alt="" width="15px"></button>
+        </form>
+        <div id="wel" style="width: 20%;">
+            <a href="#">Cart |</a>
+            <p><script>
+            data=JSON.parse(localStorage.getItem("account-data"))||[]
+            document.write("Welcome "+data[0].name+" | ");
+            </script></p>
+            <a href="./index.html">Sign Out</a>
+        </div>
+    </nav>
+    <nav id="nav3" style="position: sticky;top:77px;">
+        <button>MOBILES & TABLETS</button>
+        <button>TELEVISIONS</button>
+        <button>AUDIO</button>
+        <button>HOME APPLIANCES</button>
+        <button>COMPUTERS</button>
+        <button>CAMERAS</button>
+        <button>KITCHEN APPLIANCES</button>
+        <button>PERSONAL CARE</button>
+        <button>ACCESSORIES</button>
+    </nav>
+
+    <div id="container">
+        <!-- Here Append All the Products  -->
+    </div>
+    
+    <footer class="footer">
+        <div class="con">
+            <div class="row">
+                <div class="column">
+                    <h4>PRODUCT CATEGORIES</h4>
+                    <ul>
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">DSLR Cameras</a></li>
+                        <li><a href="#">Televisions</a></li>
+                        <li><a href="#">Air Conditioners</a></li>
+                        <li><a href="#">Refrigerators</a></li>
+                        <li><a href="#">Kitchen Appliances</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Personal Care & Grooming</a></li>
+                    </ul>
+                    <h4>FOLLOW US</h4>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="column">
+                    <h4>SITE INFO</h4>
+                    <ul>
+                        <li><a href="#">About Reliance Digital</a></li>
+                        <li><a href="#">resQ Services</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Corporate Enquires</a></li>
+                        <li style="margin-bottom: 105px;"><a href="#">Contact Us</a></li>
+                    </ul>
+                    <h4>EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h4>
+                    <img src="https://www.reliancedigital.in/build/client/images/google_play_store.png" alt="" width="130px">
+                    <img src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" alt="" width="130px">
+                </div>
+                <div class="column">
+                    <h4>RESOURCE CENTRE</h4>
+                    <ul>
+                        <li><a href="#">Product Reviews</a></li>
+                        <li><a href="#">Buying Guides</a></li>
+                        <li><a href="#">How Tos</a></li>
+                        <li><a href="#">Featured Stories</a></li>
+                        <li><a href="#">Events & Happenings</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4>POLICIES</h4>
+                    <ul>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Cancellation and Return Policy</a></li>
+                        <li><a href="#">Pricing and Payments Policy</a></li>
+                        <li><a href="#">Shipping and Delivery Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">E-waste Recycling Policy</a></li>
+                        <li><a href="#">EMI and Additional Cashback T&C</a></li>
+                        <li><a href="#">RelianceOne Loyalty Program T&C</a></li>
+                        <li><a href="#">Caution Notice</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>    
+        <div style="text-align: center;background-color:#0a244a;color: white;font-size: 13px; font-family: sans-serif;padding-top: 10px;padding-left: 100px;padding-right:100px;">
+            <h4><u>Disclaimer</u></h4>
+            <p style="margin-top:10px;padding-bottom: 20px;">Product prices, offers and availability are subject to change from time to time. All prices are inclusive of taxes. Product colours & images are only for illustration and they may not exactly match with the actual product. Product specs are subject to change & may vary from actual product. While every care is taken to avoid inaccuracies in content, these are provided as is, without warranty of any kind.</p>
+        </div>
+        <hr>
+        <div style="text-align: center;background-color:#0a244a;color: white;font-size: 13px; font-family: sans-serif;padding:20px 100px 20px 100px">
+            <p> © 2022 Nest Digital. All Rights Reserved.</p>
+        </div>
+    
+</body>
+</html>
+
+<script>
+    let fetcheddata=[]
+    function fetchdata() {
+    fetch("./mobile.json")
+    .then(res=>res.json())
+    .then(json=>{
+    fetcheddata=json
+    display(json)})
+    .catch(error=>console.log(error))
+    }fetchdata()
+    con=document.getElementById("container") 
+    display=(data)=>{
+    data.forEach(element=>{
+        pro=document.createElement("button")
+        con.append(pro)
+        name1=document.createElement("h2")
+        name1.innerText=element.name
+        image=document.createElement("img")
+        image.setAttribute("src",element.img)
+        price=document.createElement("h3")
+        price.innerText="₹"+element.price
+        category=document.createElement("p")
+        category.innerText=element.rating
+        atc=document.createElement("button")
+        atc.innerText="Add To Cart"
+        atc.style.backgroundColor="red"
+        atc.style.color="white"
+        list=document.createElement("button")
+        list.innerText="🤍Wishlist"
+        pro.append(category,image,name1,price,atc,list)
+    })
+        
+    }
+</script>

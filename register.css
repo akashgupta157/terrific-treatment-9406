@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#nav1,#nav2 div{
+    background-color: #E42529;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+#nav1 button{
+    background:transparent;
+    width: 220px;
+    border:0;
+}
+.new1{
+    border-top: 1px solid red;
+}
+#nav1 a,#nav2>div>a{
+    color: white;
+    text-decoration:none;
+    font-size:15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+#nav2 div{
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+#nav2{
+    display: flex;
+    justify-content: space-between;
+    background-color: #E42529;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+form{
+    width: 560px;
+    height: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    border: 0;
+    margin: auto;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+}
+form button,form input{
+    background:transparent;
+    border:0;
+    outline: none;
+    margin-left: 0px;
+}
+#nav3{
+    background-color:#003380;
+    display: flex;
+    justify-content: space-between;
+    padding-left:25px;
+    padding-right:25px;
+}
+#nav3 button{
+    color: white;
+    font-size:14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    background-color:#003380 ;
+    border: 0;
+    width: auto;
+    height: 40px;
+}
+#nav3 button:hover{
+    background-color:#E42529 ; 
+    cursor: pointer;
+}
+.slider,.slider1,.slider2{
+    position: relative;
+}
+#next{
+    position: absolute;
+    right: 0;
+    top: 30%;
+    width: 40px;
+    height: 30%;
+    /* pointer-events: none; */
+    z-index: 10;
+    background-color: linen;
+    border: 1px solid lightgray;
+    font-size: 40px;
+}
+#prev{
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 40px;
+    height: 30%;
+    /* pointer-events: none; */
+    z-index: 10;
+    background: linen;
+    border: 1px solid lightgray;
+    font-size: 40px;
+}
+.slider-box {
+    width :100%;
+    position  : relative;
+    overflow  : hidden;
+    margin: auto;
+}
+#slider,#slider1,#slider2 {
+    width     : 100%;
+    display   : inline-flex;
+    transition: 0.9s;
+    margin: 0;
+}
+#slider img,#slider1 img,#slider2 img{
+    height:305px;
+    width: 100%;
+}
+.indicators {
+    position : absolute;
+    left     : 50%;
+    bottom   : 20px;
+}
+.indicators span {
+    display      : inline-block;
+    width        : 10px;
+    height       : 10px;
+    border-radius: 50%;
+    background   : gray;
+    cursor       : pointer;
+}
+.info{
+    padding-left: 35px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+    color: #333333;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#screen{
+    padding-left:20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-bottom: 20px;
+    gap:50px;
+}
+.info button{
+    border: 0;
+    color: #003380;
+    font-size: 14px;
+    font-weight: 700;
+}
+.info button:hover{
+    color: #E42529;
+    cursor: pointer;
+}
+.card{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    margin: auto;
+    padding-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* gap: 10px; */
+    /* border: 2px solid black; */
+}
+.card>div{
+    display: grid;
+    text-align: center;
+    margin: auto;
+    /* border: 2px solid black; */
+}
+.card img{
+    display: block;
+    margin: auto;
+}
+.card>div button{
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    color: #003380;
+}
+.card>div button:hover{
+    color: #E42529;
+}
+.card .next1{
+    right: 0;
+    top: 160%;
+    width: 30px;
+    height: 30%;
+    align-items: center;
+    background: transparent;
+    border: 1px solid lightgray;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.card .prev1{
+    left: 0;
+    top: 160%;
+    width: 30px;
+    height: 30%;
+    background: transparent;
+    align-items: center;
+    border: 1px solid lightgray;
+    font-size: 40px;
+    font-weight: bolder;
+}
+/* =======================================================FOOTER=============================================================== */
+.footer{
+    padding: 20px 0px 0px 20px ;
+    background-color: #003380;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.footer .con .row .column ul li a{
+    color: white;
+    text-decoration:none;
+    font-size:15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.column{
+    width: 25%;
+    padding-left: 0px;
+    /* border: 1px solid black; */
+}
+.column ul li,.column h4{
+    margin-bottom: 10px;
+}
+.column .social a{
+    display: inline-block;
+    height: 40px;
+    width: 15px;
+    margin-right: 10px;
+    color: white;
+}
+.column .social a:hover{
+    color: wheat;
+}
+/* ===============================================REGISTERPAGE==================================================================== */
+.con1 {
+    width: 32%;
+    margin: auto;
+    /* border:2px solid #003380; */
+    margin-top: 50px;
+}
+.con1 #head1{
+    padding-left: 20px;
+    padding-top:10px ;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    /* margin-bottom: 30px; */
+}
+.con1 #form1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+#form1 .box{
+    position: relative;
+    width:90% ;
+    /* border:2px solid #003380; */
+}
+#form1 .box input{
+    width: 97%;
+    border-radius: 5px;
+    outline: none;
+    height: 40px;
+    border: 1px solid #757575;
+    padding-left: 10px;
+}
+#form1 .box span{
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    padding-left: 10px;
+    pointer-events: none;
+    color: #757575;
+    /* border:2px solid #003380; */
+}
+#form1 .box input:valid ~ span,
+#form1 .box input:focus ~ span{
+    color: blue;
+    transform: translateX(10px) translateY(-20px);
+    font-size: .8em;
+    background-color: white;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+#form1 .box input:valid ,
+#form1 .box input:focus{
+    border:1px solid blue;
+}
+.con1 #form1 #bnt{
+    width: 90%;
+    margin: auto;
+    height: 40px;
+    background-color: red;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.con1 #form1 #bnt a{
+    color: white;
+    text-decoration: none;
+}
+.con1 #form1 .al button a{
+    border: 0;
+    color: red;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+.con1 #form1 .al span{
+    font-size: 14px;
+}
