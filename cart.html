@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Digital</title>
-    <link rel="stylesheet" href="./mobile.css">
+    <title>Nest Digital</title>
+    <link rel="stylesheet" href="./cart.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/Screenshot (128).png">
 
@@ -19,7 +19,7 @@
         </form>
         <div id="wel" style="width:10%;">
             <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-            <a href="./cart.html">Cart |</a>
+            <a href="#">Cart |</a>
             <i class="fa-solid fa-right-from-bracket"></i>
             <a href="./index.html">Sign Out</a>
         </div>
@@ -45,10 +45,10 @@
         <button>PERSONAL CARE</button>
         <button>ACCESSORIES</button>
     </nav>
+    <div id="carty">
 
-    <div id="container">
-        <!-- Here Append All the Products  -->
     </div>
+    <br><br><br><br><br><br><br><br><br>
     
     <footer class="footer">
         <div class="con">
@@ -129,53 +129,23 @@
 </html>
 
 <script>
-    let fetcheddata=[]
-    function fetchdata() {
-    fetch("./mobile.json")
-    .then(res=>res.json())
-    .then(json=>{
-    fetcheddata=json
-    display(json)})
-    .catch(error=>console.log(error))
-    }fetchdata()
-    con=document.getElementById("container") 
-    display=(data)=>{
-    data.forEach(element=>{
-        pro=document.createElement("button")
+    // mdata=JSON.parse(localStorage.getItem("m-data"))||[]
+    sdata=JSON.parse(localStorage.getItem("s-data"))||[]
+    con=document.getElementById("carty")
+    display=()=>{
+    sdata.forEach(element=>{
+        pro=document.createElement("div")
         con.append(pro)
         name1=document.createElement("h2")
-        name1.innerText=element.name
+        name1.innerText=element.name1
         image=document.createElement("img")
-        image.setAttribute("src",element.img)
+        image.setAttribute("src",element.image)
         price=document.createElement("h3")
-        price.innerText="₹"+element.price
+        price.innerText=element.price
         category=document.createElement("p")
-        category.innerText=element.rating
-        id=document.createElement("p")
-        id.innerText=element.article
-        atc=document.createElement("button")
-        atc.innerText="Add To Cart"
-        atc.style.backgroundColor="red"
-        atc.style.color="white"
-        console.log(name1.innerText);
-        atc.onclick=()=>{
-            qw={
-                name1:name1.innerText,
-                image:image.src,
-                price:price.innerText,
-                id:id.innerText
-            }
-            sdata.push(qw)
-            localStorage.setItem("s-data",JSON.stringify(sdata))
-        }
-        sdata=JSON.parse(localStorage.getItem("s-data"))||[]
-        image.onclick=()=>{
-        window.location.href="./apple.html"
-        }
-        list=document.createElement("button")
-        list.innerText="🤍Wishlist"
-        pro.append(category,image,name1,price,atc,list)
+        category.innerText=element.category
+        pro.append(image,name1,price)
     })
-        
     }
+    display()
 </script>

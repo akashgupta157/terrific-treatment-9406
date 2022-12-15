@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Digital</title>
-    <link rel="stylesheet" href="./mobile.css">
+    <title>Nest Digital</title>
+    <link rel="stylesheet" href="./apple.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/Screenshot (128).png">
 
@@ -46,8 +46,59 @@
         <button>ACCESSORIES</button>
     </nav>
 
-    <div id="container">
-        <!-- Here Append All the Products  -->
+    <div id="bag">
+        <div style="margin-top: 100px;margin-bottom: 50px;">
+            <img id="img" src="https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NzA3M3xpbWFnZS9qcGVnfGltYWdlcy9oNGEvaDQ1Lzk4OTA1NDQ3MTM3NTguanBnfGEzYzVkZjMzYjY4NjE0MDE2YTEzY2M1MWRiZDUyZjJjNGM2MWVkYzJlNzU4Zjk0NGY0Y2Y3NjE5Y2RiMWQzMjg" width="400px" alt="">
+        </div>
+        <div id="desc" style="margin-top: 10px;margin-bottom: 50px;">
+            <p id="article" style="margin-top: 20px;margin-bottom: 10px;">Article ID: 493177770</p>
+            <h2 id="model" style="margin-bottom: 20px;">Apple iPhone 14 Plus 256 GB, Starlight</h2>
+            <div style="display: flex;gap:10px;margin-bottom:10px;">
+                <input style="width: 18px;" type="checkbox"  id="">
+                <p>Add to Compare |</p>
+                <p> <i class="fa-solid fa-share-nodes"></i> </p>
+                <p>| <i class="fa-solid fa-print"></i> Print</p>
+            </div>
+            <hr style="border-color: rgba(27, 31, 35, 0.15);">
+            <h4 style="margin-top: 10px;margin-bottom: 10px;">Description</h4>
+                <li>16.95 cm (6.7 Inch) Super Retina XDR OLED display</li>
+                <li>12 MP Main + 12 MP Ultra Wide Lens Rear Camera</li>
+                <li>12 MP Selfie Camera, Fingerprint-resistant oleophobic coating</li>
+                <li>Rated IP68 Splash, Water and Dust Resistant</li>
+                <li>A15 Bionic chip, 6‑core CPU, 5‑core GPU, 16‑core Neural Engine</li>
+                <li>Enabled by TrueDepth camera for facial recognition</li>
+                <li>Emergency SOS Crash Detection Safety</li>
+                <li>FaceTime video calling over cellular or Wi‑Fi</li>
+                <li>FaceTime audio, Spatial Audio playback</li>
+                <li>Activate hands‑free with only your voice using - Hey Siri</li>
+                <li>MagSafe wireless charging up to 15 Watts</li>
+            <h4 style="margin-top: 10px;margin-bottom: 10px;">Warranty</h4>
+            <li>1 Year manufacturer warranty</li>
+            <h4 style="margin-top: 10px;margin-bottom: 10px;">Return Policy</h4>
+            <li>Items are eligible for return within 7 Days of Delivery. <a href="#">Read T&C</a> </li>
+            <li>All accessories, product & packaging need to be returned in original condition.</li>
+            <h4 style="margin-top: 10px;margin-bottom: 10px;">Gain more with offers (1)</h4>
+            <li>Get Cashback upto Rs. 1,000 on Mobikwik Wallet. <a href="#">Read T&C</a></li>
+            
+        </div>
+        <!-- <div style="border-left: 1px solid gray;height: 500px;"></div> -->
+        <div style="box-shadow: rgba(27, 31, 35, 0.15) 0px 0px 0px 2px;margin-top: 146px;">
+            <!-- <hr> -->
+            <div style="margin-left: 20px">
+                <div style="display: flex;;margin-top: 20px;margin-bottom: 10px;">
+                    <p style="font-size: 15px;margin-top: 10px;">MRP:</p>
+                    <h2 id="price" style="color:#003380;margin-left: 5px;">₹99,900.00</h2>
+                </div>
+                <p>(Inclusive of all taxes)</p>
+                <p>EMIs (Credit Cards) from ₹4796.49/month | <a style="text-decoration: none;" href="#">View Plans</a> </p>
+                <h3 style="margin-bottom: 25px;">FREE Shipping!</h3>
+                <input id="b" style="margin-bottom: 15px;"type="text"placeholder="Enter PIN Code">
+                <div>
+                    <button id="a">ADD TO CART</button>
+                    <button id="c">BUY NOW</button>
+                </div>
+            </div>
+        </div>
     </div>
     
     <footer class="footer">
@@ -129,53 +180,19 @@
 </html>
 
 <script>
-    let fetcheddata=[]
-    function fetchdata() {
-    fetch("./mobile.json")
-    .then(res=>res.json())
-    .then(json=>{
-    fetcheddata=json
-    display(json)})
-    .catch(error=>console.log(error))
-    }fetchdata()
-    con=document.getElementById("container") 
-    display=(data)=>{
-    data.forEach(element=>{
-        pro=document.createElement("button")
-        con.append(pro)
-        name1=document.createElement("h2")
-        name1.innerText=element.name
-        image=document.createElement("img")
-        image.setAttribute("src",element.img)
-        price=document.createElement("h3")
-        price.innerText="₹"+element.price
-        category=document.createElement("p")
-        category.innerText=element.rating
-        id=document.createElement("p")
-        id.innerText=element.article
-        atc=document.createElement("button")
-        atc.innerText="Add To Cart"
-        atc.style.backgroundColor="red"
-        atc.style.color="white"
-        console.log(name1.innerText);
-        atc.onclick=()=>{
-            qw={
-                name1:name1.innerText,
-                image:image.src,
-                price:price.innerText,
-                id:id.innerText
-            }
-            sdata.push(qw)
-            localStorage.setItem("s-data",JSON.stringify(sdata))
+    img=document.getElementById("img").src
+    button=document.getElementById("a")
+    pin=document.getElementById("b")
+    button.onclick=()=>{
+        let Data={
+            img:img,
+            name:model.innerText,
+            price:price.innerText,
+            article:article.innerText,
+            pin:pin.value
         }
-        sdata=JSON.parse(localStorage.getItem("s-data"))||[]
-        image.onclick=()=>{
-        window.location.href="./apple.html"
-        }
-        list=document.createElement("button")
-        list.innerText="🤍Wishlist"
-        pro.append(category,image,name1,price,atc,list)
-    })
-        
+        mdata.push(Data);
+        localStorage.setItem("m-data",JSON.stringify(mdata))
     }
+    mdata=JSON.parse(localStorage.getItem("m-data"))||[]
 </script>
