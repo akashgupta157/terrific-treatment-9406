@@ -4,38 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Page</title>
-    <link rel="stylesheet" href="./register.css">
-    <link rel="icon" type="image/x-icon" href="img/Screenshot (128).png">
+    <title>Nest Digital</title>
+    <link rel="stylesheet" href="./cart.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/Screenshot (128).png">
+
 </head>
 <body>
-    <!-- <nav id="nav1">
-        <div style="display:grid;grid-template-columns: repeat(7,1fr);margin: auto;gap:5px;">
-        <button><a href="#">OUR BRAND PROMISE</a></button>
-        <button><a href="https://www.reliancedigital.in/content/cancellation-and-return-policy">EASY RETURN</a></button>
-        <button><a href="#">NEXT DAY DELIVERY</a></button>
-        <button><a href="https://www.reliancedigital.in/content/resq_services">SERVICE GUARANTEE</a></button>
-        <button><a href="#">UNMATCHED NETWORK</a></button>
-        <button><a href="https://www.reliancedigital.in/locateus">Find a store</a></button>
-        <button><a href="https://www.reliancedigital.in/content/contactus">Contact us</a></button>
-        </div>
-    </nav> -->
-    <!-- <hr class="new1"> -->
-    <nav id="nav2" style="position: sticky;top: 0;z-index: 100;">
-        <button style="border: 0;background-color: #E42529; border-radius: 35px;"><a href="./index.html"><img src="./img/Screenshot (128).png" alt="" width="150px"> </a></button>
-        <form action="" style="width: 35%;">
-            <input style="width: 100%;font-size: 95%;" type="text" placeholder="Find your favorite product">
+    <nav id="nav2" style="position: sticky;top:0px;">
+        <button style="border: 0;background-color: #E42529;padding-bottom: 5px;"><a href="./index.html"><img src="./img/Screenshot (128).png" alt="" width="150px"> </a></button>
+        <form action="">
+            <input style="width: 100%;font-size: 95%;" type="text" placeholder="Find your favorite products">
             <button><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-18.png" alt="" width="15px"></button>
         </form>
-        <div style="width:9%;display:flex;justify-content: space-around;">
+        <div id="wel" style="width:10%;">
             <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-            <a href="./cart.html">Cart |</a>
-            <i class="fa-solid fa-user"></i>
-            <a href="./login.html">Login</a>
+            <a href="#">Cart |</a>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <a href="./index.html">Sign Out</a>
         </div>
     </nav>
-    <nav id="nav3"  style="position: sticky;top: 77px;;z-index: 100;">
+    <nav id="nav3" style="position: sticky;top:77px;">
         <div class="menu">
             <button class="button">MOBILES & TABLETS</button>
             <div class="drop">
@@ -56,59 +45,30 @@
         <button>PERSONAL CARE</button>
         <button>ACCESSORIES</button>
     </nav>
-    <div class="con1">
-        <div id="head1">
-            <h3>Register New Account</h3>
-        </div>
-        <div id="form1">
-            <div class="box">
-                <input type="text" id="name" required="required"/>
-                <span>Username*</span>
+    <nav id="nav4">
+        <h3>My Cart</h3>
+    <p style="margin-left: 10px;">(<p style="margin-right:5px;margin-left: 2px;" id="total"></p> Items)</p>
+        
+    </nav>
+    <div class="main">
+        <div id="carty"></div>
+    <div id="info">
+        <button id="out" style="font-weight: bolder;">CHECKOUT</button>
+        <div id="dprice">
+            <div style="display: flex;">
+                <input type="text" name="" id="coupon" placeholder="Enter a Coupon" ><p style="border:1px solid black;height:25px;width: 13%;padding-top:5px;padding-left: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-left: 0;color: #0a244a;">APPLY</p> 
             </div>
-            <div class="box">
-                <input type="text" id="email" required="required"/>
-                <span>Email Address*</span>
+            <H5>PRICE DETAILS</H5>
+            <div id="price" style="display: flex;justify-content: space-between;">
+                <p>Price</p><p id="pric"></p>
             </div>
-            <div class="box">
-                <input type="password" id="password" required="required"/>
-                <span>Create Password*</span>
-            </div>
-            <div class="box">
-                <input type="number" id="mobile" required="required"/>
-                <span>Mobile Number*</span>
-            </div>
-            <button id="bnt"><a href="./login.html">PROCEED</a></button>
-            <div class="al" style="margin-bottom: 40px;">
-                <span>Already Registered?</span>
-                <button style="border:0;background: none;"><a href="./login.html">LOGIN</a></button>
+            <div  style="display: flex;justify-content: space-between;">
+                <p>Delivery Charges</p><p style="color: green;">FREE</p>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br>
-
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
     <footer class="footer">
         <div class="con">
             <div class="row">
@@ -186,22 +146,100 @@
     
 </body>
 </html>
+
 <script>
-    let form=document.getElementById("form1")
-    let email=document.getElementById("email")
-    let password=document.getElementById("password")
-    let name=document.getElementById("name")
-    let mobile=document.getElementById("mobile")
-    let button=document.getElementById("bnt")  
-    button.onclick=()=>{
-    let formData = {
-        name:name.value,
-        email:email.value,
-        password:password.value,
-        mobile:mobile.value
-    } 
-    data.push(formData);
-    localStorage.setItem("account-data",JSON.stringify(data))
-}
-data=JSON.parse(localStorage.getItem("account-data"))||[]
+    p=document.getElementById("pric")
+    mdata=JSON.parse(localStorage.getItem("m-data"))||[]
+    sdata=JSON.parse(localStorage.getItem("s-data"))||[]
+    con=document.getElementById("carty")
+    check=document.getElementById("out")
+
+    sum=[]
+    display=()=>{
+    sdata.forEach((element,index)=>{
+        pro=document.createElement("button")
+        con.append(pro)
+        name1=document.createElement("h2")
+        name1.innerText=element.name
+        image=document.createElement("img")
+        image.setAttribute("src",element.img)
+        price=document.createElement("h3")
+        price.innerText="₹"+element.price
+        sum.push(element.price)
+        category=document.createElement("p")
+        category.innerText=element.rating
+        remove=document.createElement("button")
+        remove.innerText="Remove"
+        remove.style.marginRight="20px"
+        remove.style.color="blue"
+        remove.onclick=()=>{
+            sdata.splice(index,1)
+            localStorage.setItem("s-data",JSON.stringify(sdata))
+            window.location.reload(true)
+            }
+        plus=document.createElement("button")
+        span=document.createElement("span")
+        span.innerText=1
+        plus.innerText="+"
+        minus=document.createElement("button")
+        minus.innerText="-"
+        wish=document.createElement("button")
+        wish.style.color="blue"
+        wish.innerText="Add to Wishlist"
+        pro.append(image,name1,price,plus,span,minus,remove,wish)
+    })
+    }
+    display()
+    display2=()=>{
+    mdata.forEach((element,index)=>{
+        pro=document.createElement("button")
+        con.append(pro)
+        name1=document.createElement('h2')
+        name1.innerText=element.name
+        image=document.createElement("img")
+        image.setAttribute("src",element.img)
+        image.style.width="230px"
+        price=document.createElement('h3')
+        price.innerText="₹"+element.price
+        sum.push(Number(element.price))
+        aricle=document.createElement("p")
+        aricle.innerText=element.article
+        pin=document.createElement('h4')
+        pin.innerText=element.pin
+        remove=document.createElement("button")
+        remove.innerText="Remove"
+        remove.style.marginRight="20px"
+        remove.style.color="blue"
+        remove.onclick=()=>{
+            mdata.splice(index,1)
+            localStorage.setItem("m-data",JSON.stringify(mdata))
+            window.location.reload(true)
+            }
+            wish=document.createElement("button")
+        wish.style.color="blue"
+        wish.innerText="Add to Wishlist"
+        plus=document.createElement("button")
+        span=document.createElement("span")
+        span.innerText=1
+        plus.innerText="+"
+        minus=document.createElement("button")
+        minus.innerText="-"
+        pro.append(image,name1,price,plus,span,minus,remove,wish)
+        })
+    }
+    display2()
+    total=document.getElementById("total")
+    total.innerText=sdata.length+mdata.length
+    check.onclick=()=>{
+        alert("Thanks for Shopping! Order Placed" )
+        window.localStorage.removeItem('m-data');
+        window.localStorage.removeItem('s-data');
+        window.location.reload(true)
+    }
+    add=0
+    console.log(sum);
+    for (let index = 0; index < sum.length; index++) {
+    add+=sum[index]
+    }
+    p.innerText="₹"+add
 </script>

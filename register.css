@@ -16,6 +16,9 @@
     width: 220px;
     border:0;
 }
+#nav2 div i{
+    color: white;
+}
 .new1{
     border-top: 1px solid red;
 }
@@ -78,6 +81,28 @@ form button,form input{
 #nav3 button:hover{
     background-color:#E42529 ; 
     cursor: pointer;
+}
+.drop{
+    display: none;
+    position: absolute;
+    width: 200px;
+    z-index: 1;
+}
+.drop a{
+    text-decoration: none;
+    display: flex;
+    color: white;
+    width: 250px;
+    background-color: #303F9F;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.drop a:hover{
+    text-decoration: underline;
+}
+.menu:hover .drop{
+    display: block;
 }
 .slider,.slider1,.slider2{
     position: relative;

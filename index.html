@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Digital</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/Screenshot (128).png">
 
@@ -13,25 +13,39 @@
 <body>
     <nav id="nav1">
         <div>
+        <i class="fa-solid fa-location-dot"></i>
         <a href="https://www.reliancedigital.in/locateus">Find a store |</a>
         <a href="https://www.reliancedigital.in/solutionbox">Buying guides | </a>
         <a href="https://www.reliancedigital.in/content/contactus">Contact us</a>
         </div>
     </nav>
-    <nav id="nav2">
+    <nav id="nav2" style="position: sticky;top: 0;z-index: 100;">
         <button style="border: 0;background-color: #E42529;padding-bottom: 5px;"><a href="./index.html"><img src="./img/Screenshot (128).png" alt="" width="150px"> </a></button>
         <form action="">
             <input style="width: 100%;font-size: 95%;" type="text" placeholder="Find your favorite products">
             <button><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-18.png" alt="" width="15px"></button>
         </form>
-        <div style="width: 9%;">
-            <a href="#">Cart |</a>
+        <div>
+            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+            <a href="./cart.html">Cart |</a>
+            <i class="fa-solid fa-user"></i>
             <a href="./login.html">Login |</a>
+            <i class="fa-solid fa-pen"></i>
             <a href="./register.html">Sign in</a>
         </div>
     </nav>
-    <nav id="nav3">
-        <button>MOBILES & TABLETS</button>
+    <nav id="nav3" style="position: sticky;top: 77px;z-index: 100;">
+        <div class="menu">
+            <button class="button">MOBILES & TABLETS</button>
+            <div class="drop">
+                <a href="./mobile.html">Smartphones</a>
+                <a href="">Wearable Technology</a>
+                <a href="">Accessories</a>
+                <a href="">Headphones & Headsets</a>
+                <a href="">Tablets & eReaders</a>
+                <a href="">Power Banks</a>
+            </div>
+        </div>
         <button>TELEVISIONS</button>
         <button>AUDIO</button>
         <button>HOME APPLIANCES</button>
@@ -42,8 +56,6 @@
         <button>ACCESSORIES</button>
     </nav>
     <div class="slider">
-        <!-- <button id="prev"><</button>
-        <button id="next">></button> -->
         <div class="slider-box"> 
             <div id="slider">
                 <img src="https://www.reliancedigital.in/medias/Year-End-Sale-Carousel-Banner-30-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNDM0OTN8aW1hZ2UvanBlZ3xpbWFnZXMvaGYzL2g3MC85OTI5MjI4MjIyNDk0LmpwZ3wzYmI0MmI0ZmJhMGFmNzUzYTMxZGE1ZjljODAyZDQwYWFmODAwNDA2Nzk2ZDgwY2M2MzcyZjBlYTYwMjdhMTNi" alt="">
@@ -56,8 +68,6 @@
         </div>
     </div>
     <div class="slider1">
-        <!-- <button id="prev"><</button>
-        <button id="next">></button> -->
             <div class="slider-box">
                 <div id="slider1">
                     <img src="https://www.reliancedigital.in/medias/Entertainment-Fest-Carousel-Banner-08-D.jpg?context=bWFzdGVyfGltYWdlc3wyMDEwMzl8aW1hZ2UvanBlZ3xpbWFnZXMvaGQxL2g2MS85OTI5MTgxNjI2Mzk4LmpwZ3w2MjQzNGNlODRiMmRkZmE1ZDA1Njg3MTNmM2ExMWE5ZDQ4MDJhN2VkYTBmOWVjMjg1MTdhNTM3YmNhM2E3YjM0" alt="">
@@ -94,67 +104,110 @@
             <button>Apple MGN63HNA MacBook Air</button>
             <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹86,990.00</span></div>
             <span>M.R.P:<strike>₹90,000.00</strike></span>
-            <span>You Save:   13%(12,910)</span>
+            <span>You Save:   13%(v12,910)</span>
         </div>
         <div>
             <img src="https://www.reliancedigital.in/medias/HP-ER1501AU-Laptop-493178397-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1ODU4NnxpbWFnZS9qcGVnfGltYWdlcy9oNmUvaDIyLzk5MDE1NTA5Mjc5MDIuanBnfDlkOGRhZGEyOWMyZWQzNTI2YTc4ZTY5ODJhYjBlNTRlZDg5YmQ5YTczM2Q2MTg0ZGRkYTE3Y2IyMmI1NTQzMDY" alt="">
             <button>HP 15s-er1501AU Standard Laptop</button>
             <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹28,490.00</span></div>
             <span>M.R.P:<strike>₹41,000.00</strike></span>
-            <span>You Save:   13%(12,910)</span>
+            <span>You Save:   13%(₹12,910)</span>
         </div>
         <div>
             <img src="https://www.reliancedigital.in/medias/Apple-MGND3HNA-Laptops-491946465-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0ODM0OXxpbWFnZS9qcGVnfGltYWdlcy9oMDAvaGIwLzk0NDMwOTEzMTY3NjYuanBnfDE1MTdiNjJmZTFlZTgxY2I1MDhkZDI1ZmU1ZjExMmQyYWQzODUxYmY3M2M4ZDhiNGUwYWFiOGY0NTNlODVmMmU" alt="">
             <button>Apple MGND3HNA MacBook Air </button>
             <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹84,990.00</span></div>
             <span>M.R.P:<strike>₹90,000.00</strike></span>
-            <span>You Save:   13%(12,910)</span>
+            <span>You Save:   13%(₹12,910)</span>
         </div>
         <div>
             <img src="https://www.reliancedigital.in/medias/Acer-15-Aspire3-R3-Laptop-492849812-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2MjAwN3xpbWFnZS9qcGVnfGltYWdlcy9oM2MvaDMyLzk4NDEyMjc0OTc1MDIuanBnfDEwNjk4MWE3MTQ5MmY1YjJkMjE1NWYwMTFkNDlhMTViNmNkMmFjOGFjODE5NTEwYzdkZTA2MDJhYWM1MTVjYzI" alt="">
             <button>Acer A315-23 Aspire 3 Laptop</button>
             <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹24,990.00</span></div>
             <span>M.R.P:<strike>₹40,000.00</strike></span>
-            <span>You Save:   13%(12,910)</span>
+            <span>You Save:   13%(₹12,910)</span>
         </div>
-        <!-- <div class="next1">></div>  -->
+        <div>
+            <img src="https://www.reliancedigital.in/medias/Acer-UN-431SI-100-Laptop-493178361-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzMzM0MHxpbWFnZS9qcGVnfGltYWdlcy9oZTAvaGRlLzk5MDk3NDIzMzgwNzguanBnfGMwZTI5ZjhlZjY4MGQ1ZjM4YzNmOTRmMTIxYjRmNDZiYTU5YjlmOGEwOTdhZTllMDYxMWYwZWI5ZDFmZDIwNDA" alt="">
+            <button>Asus KM512WS VivoBook Pro 14 Laptop</button>
+            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹33,990.00</span></div>
+            <span>M.R.P:<strike>₹57,999.00</strike></span>
+            <span>You Save:   41%(₹24,009)</span>
+        </div>
     </div>
     <div class="info">
-        <span>UPTO RS.5000 OFF ON TRENDING LAPTOPS |</span>
-        <button style="background: none;">VIEW ALL</button>
+        <span>PRICE DROP ON APPLE SMARTWATCHES |</span>
+        <button>VIEW ALL</button>
     </div>
     <div class="card">
-        <!-- <div class="prev1"><</div>  -->
+        <img src="https://www.reliancedigital.in/medias/Apple-Watches-Producst-Carousel-29-11-2022.jpg?context=bWFzdGVyfGltYWdlc3w1NTYyOHxpbWFnZS9qcGVnfGltYWdlcy9oOTQvaDQyLzk5MjgzNzA5Nzg4NDYuanBnfDg5OTE2MzFkOTU2YmI1ODhjOTZmODQ2YzkyNjUzNjYwZTYxZGQ2NGY4OTdhNmU3YjBkZGZmZGI3MzM2OWQwNzQ" width="350px" style="margin-left: 10px;" alt="">
         <div>
-            <img src="https://www.reliancedigital.in/medias/Apple-MGN63HNA-Laptops-491946461-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MjM5M3xpbWFnZS9qcGVnfGltYWdlcy9oYzcvaDE0Lzk0NDMwODM3ODAxMjYuanBnfGUwMGRjNjBhZDVlM2NlMmUyYmFhMTk1MjNmMDM5NTEzMWUzODRhODE0ZjdmOWM2OGEyODBjYjhjMGNlOWExZWY" alt="">
-            <button>Apple MGN63HNA MacBook Air</button>
-            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:px;">₹86,990.00</span></div>
-            <span>M.R.P:<strike>₹90,000.00</strike></span>
-            <span>You Save:   13%(12,910)</span>
-        </div>
-        <div>
-            <img src="https://www.reliancedigital.in/medias/HP-ER1501AU-Laptop-493178397-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1ODU4NnxpbWFnZS9qcGVnfGltYWdlcy9oNmUvaDIyLzk5MDE1NTA5Mjc5MDIuanBnfDlkOGRhZGEyOWMyZWQzNTI2YTc4ZTY5ODJhYjBlNTRlZDg5YmQ5YTczM2Q2MTg0ZGRkYTE3Y2IyMmI1NTQzMDY" alt="">
-            <button>HP 15s-er1501AU Standard Laptop</button>
-            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹86,990.00</span></div>
-            <span>M.R.P:<strike>₹90,000.00</strike></span>
-            <span>You Save:   13%(12,910)</span>
+            <img src="https://www.reliancedigital.in/medias/Apple-Ultra-Sports-Fitness-Watches-493177935-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2NTIxM3xpbWFnZS9qcGVnfGltYWdlcy9oNjIvaDA1Lzk4OTE5NDYwMzcyNzguanBnfDUxNDYwOGEyYWRjZmUyMTg2OWVkYjM3MTg5ZTAzODA1OTc2MmJmYWIwMjc1Y2IwYzc1OGZlY2YxMTI2YTJhNzA" alt="">
+            <button>Apple Watch Ultra GPS + Cellular - 49 mm Titanium Case </button>
+            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹85,405.00</span></div>
+            <span>M.R.P:<strike>₹89,900.00</strike></span>
+            <span>You Save:   5%(₹4,495)</span>
         </div>
         <div>
-            <img src="https://www.reliancedigital.in/medias/Acer-15-Aspire3-R3-Laptop-492849812-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2MjAwN3xpbWFnZS9qcGVnfGltYWdlcy9oM2MvaDMyLzk4NDEyMjc0OTc1MDIuanBnfDEwNjk4MWE3MTQ5MmY1YjJkMjE1NWYwMTFkNDlhMTViNmNkMmFjOGFjODE5NTEwYzdkZTA2MDJhYWM1MTVjYzI" alt="">
-            <button>Acer A315-23 Aspire 3 Laptop</button>
-            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹86,990.00</span></div>
-            <span>M.R.P:<strike>₹90,000.00</strike></span>
-            <span>You Save:   13%(12,910)</span>
+            <img src="https://www.reliancedigital.in/medias/Apple-Series-7-Smart-Watches-491998485-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzNTU4MnxpbWFnZS9qcGVnfGltYWdlcy9oYzEvaGYxLzk2NDk0MDIzNDc1NTAuanBnfGJmYzdiN2MxYWJhYTRkNmFiNDdkZTI4ZDBlZTVhYTUxZTVkNGFhNzliNTNlYjQwZGUzMDM0MGZmOGZmM2M0YzU" alt="">
+            <button>Apple Watch Series 7 Cellular - 45 mm Starlight Aluminum Case</button>
+            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹53,900.00</span></div>
+            <span>M.R.P:<strike>₹57,999.00</strike></span>
+            <span>You Save:   9%(₹4,099)</span>
         </div>
-        <div id="hid">
-            <img src="https://www.reliancedigital.in/medias/Apple-MGND3HNA-Laptops-491946465-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0ODM0OXxpbWFnZS9qcGVnfGltYWdlcy9oMDAvaGIwLzk0NDMwOTEzMTY3NjYuanBnfDE1MTdiNjJmZTFlZTgxY2I1MDhkZDI1ZmU1ZjExMmQyYWQzODUxYmY3M2M4ZDhiNGUwYWFiOGY0NTNlODVmMmU" alt="">
-            <button>Apple MGND3HNA MacBook Air </button>
-            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹84,990.00</span></div>
-            <span>M.R.P:<strike>₹90,000.00</strike></span>
-            <span>You Save:   13%(12,910)</span>
+        <div>
+            <img src="https://www.reliancedigital.in/medias/Apple-SE-Sports-Fitness-Watches-493177921-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzNjk1M3xpbWFnZS9qcGVnfGltYWdlcy9oNjAvaDhhLzk4OTE5ODYwNzk3NzQuanBnfGVkNWZhOGU5YjI5NjZhNjQ3ZjUwNjZjYmRhNTU5YmVjOTMzZmFiZDA1YjY1NmExZjRhNGY0N2I3ODg4NzQxMzg" alt="">
+            <button>Apple Watch SE GPS - 44 mm Starlight Aluminium Case with Starlight</button>
+            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹31,255.00</span></div>
+            <span>M.R.P:<strike>₹32,900.00</strike></span>
+            <span>You Save:   5%(₹1,645)</span>
         </div>
-        <!-- <div class="next1">></div>  -->
+        <div>
+            <img src="https://www.reliancedigital.in/medias/Apple-Series-7-Smart-Watches-491998505-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzNzYwMnxpbWFnZS9qcGVnfGltYWdlcy9oODEvaGIyLzk2NDk0NzMxOTE5NjYuanBnfDI0YjAyMGQzY2YwMmY4YjI1YTM2NGQ4MGEzZjA1YmM5OGZhM2E4OGJiMjQ3MDJhYzRmMjliYjdjODc3Y2Y5MDk" alt="">
+            <button>Apple Watch Series 7 Cellular - 45 mm Blue Aluminum </button>
+            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹53,900.00</span></div>
+            <span>M.R.P:<strike>₹55,000.00</strike></span>
+            <span>You Save:   5%(₹1,100)</span>
+        </div>
     </div>
+    <div class="info">
+        <span>UP TO 70% OFF ON EVERYDAY APPLIANCES |</span>
+        <button>VIEW ALL</button>
+    </div>
+    <div class="card">
+        <div>
+            <img src="https://www.reliancedigital.in/medias/Orient-IWON03VPSM3-Geyser-493620495-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxNjkyN3xpbWFnZS9qcGVnfGltYWdlcy9oNWUvaDFkLzk4NzY3ODEyNjkwMjIuanBnfDExYWU5MDJjZmNhNTljZDBlOGQ2NGY0NDkzZjg0MDgyNTdlNTkzOTViZjkwMTZlNzlmZTliMjg0ODViZDE5NWU" alt="">
+            <button>Orient 3 Litre Onsen Instant Water Heater with LED indicator (Beige)</button>
+            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹2,599.00</span></div>
+            <span>M.R.P:<strike>₹5,190.00</strike></span>
+            <span>You Save:   50%(₹2,591)</span>
+        </div>
+        
+        <div>
+            <img src="https://www.reliancedigital.in/medias/Lifelong-LLDI09-Irons-492664307-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMzA3M3xpbWFnZS9qcGVnfGltYWdlcy9oODkvaDIxLzk4NTM2Nzg1ODM4MzguanBnfDc2NjcxZTI5NjFkMTBiM2EyNDhiZGRmMzkwZDQyMzA0NzI3ZTU4MmEyYTRiODdjODZiN2Q5MmQyZmU1NjAzZGM" alt="">
+            <button>Lifelong LLDI09 1100 Watts Dry Iron, Blue and White</button>
+            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹449.00.00</span></div>
+            <span>M.R.P:<strike>₹899.00</strike></span>
+            <span>You Save:   50%(₹450)</span>
+        </div>
+        <div>
+            <img src="https://www.reliancedigital.in/medias/PIGEON-Mini-Eco-Speciality-Appliances-492664295-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMTgwMnxpbWFnZS9qcGVnfGltYWdlcy9oODYvaDY1Lzk3NTQyMjcyNzc4NTQuanBnfDU4NzljN2IzOWI4YWM2NWVjOTc4ZjNlM2NmYjVhNjc5NGM2NTRmZWY2NmJjMmFjNmY2OTVkYWUwZmRjNzgwN2E" alt="">
+            <button>Pigeon Mini Eco Handy Chopper with 3 Blades</button>
+            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹259.00</span></div>
+            <span>M.R.P:<strike>₹445.00</strike></span>
+            <span>You Save:   42%(₹186)</span>
+        </div>
+        <div>
+            <img src="https://www.reliancedigital.in/medias/491166983-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1NTE2OXxpbWFnZS9wbmd8aW1hZ2VzL2gwNC9oYjUvODk2MzkzMzcwMDEyNi5wbmd8MGFjZWY0YzdiMjA5NzY3Y2ExYjg2MTJiZTBhNTE3NDhjYjQ3MmY2NDczNzNjOTU5M2JmODQwOTVjMzA4YjhlNw" alt="">
+            <button>Bajaj 15 litres Storage Water Heater with Glass Lined Coating, New Shakti</button>
+            <div><span>Deal Price:</span><span style="font-weight: 1000;font-size:20px;">₹7,299.00</span></div>
+            <span>M.R.P:<strike>₹11,500.00</strike></span>
+            <span>You Save:   37%(₹4,201)</span>
+        </div>
+        <img src="https://www.reliancedigital.in/medias/Best-Deals-in-Everyday-Appliances-Producst-Carousel-27-10-2022-02.jpg?context=bWFzdGVyfGltYWdlc3wxMDA2MDF8aW1hZ2UvanBlZ3xpbWFnZXMvaGVlL2hmYy85OTEzNzc3MTkyOTkwLmpwZ3xjYzI2MWQ3MmY5MjZhNTcyNzg2ZDQzY2UzZDMzODFjYzBhMDNhMWJiZjBiNWY2ZWQ4OGQ3NDVjODhkMTFlZjUz" width="350px" style="margin-right: 10px;" alt="">
+
+    </div>
+
     <div class="info">
         <span>GREAT DEALS ON ELECTRONICS</span>
     </div>
@@ -261,315 +314,4 @@
     
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script src="./index.js"></script>
