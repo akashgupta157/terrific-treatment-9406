@@ -109,6 +109,10 @@ form button,form input{
 .menu:hover .drop{
     display: block;
 }
+#qp{
+    margin-left: 1265px;
+    margin-top: 10px;
+}
 /* ========================================================================FOOTER======================================================================== */
 .footer{
     padding: 20px 0px 0px 20px ;
@@ -149,7 +153,7 @@ ul{
 .column .social a:hover{
     color: wheat;
 }
-@media only screen and (min-width: 889px) {
+@media only screen and (max-width:1409px) and ( min-width: 889px) {
     #screen{
         margin: auto;
         display: grid;
@@ -166,6 +170,10 @@ ul{
         margin: auto;
         height: 10%;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+    #qp{
+        margin-left: 1040px;
+        margin-top: 10px;
     }
 }
 /* ================================================================PRODUCT PAGE========================================================================== */
@@ -226,7 +234,7 @@ ul{
     margin-bottom: 20px;
 }
 #container>button button{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-right: 20px;
     margin-left: 30px;
     width: 100px;
@@ -237,6 +245,38 @@ ul{
     border-radius: 5px;
     margin-bottom: 20px;
     cursor: pointer;
+}
+.slider-box {
+    width :100%;
+    position  : relative;
+    overflow  : hidden;
+    margin: auto;
+}
+#slider,#slider1,#slider2 {
+    width     : 100%;
+    display   : inline-flex;
+    transition: 0.9s;
+    margin: 0;
+}
+#slider img,#slider1 img,#slider2 img{
+    height:305px;
+    width: 100%;
+}
+.slider,.slider1,.slider2{
+    position: relative;
+}
+.indicators {
+    position : absolute;
+    left     : 50%;
+    bottom   : 20px;
+}
+.indicators span {
+    display      : inline-block;
+    width        : 10px;
+    height       : 10px;
+    border-radius: 50%;
+    background   : gray;
+    cursor       : pointer;
 }
 
 

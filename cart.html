@@ -45,11 +45,30 @@
         <button>PERSONAL CARE</button>
         <button>ACCESSORIES</button>
     </nav>
-    <div id="carty">
-
+    <nav id="nav4">
+        <h3>My Cart</h3>
+    <p style="margin-left: 10px;">(<p style="margin-right:5px;margin-left: 2px;" id="total"></p> Items)</p>
+        
+    </nav>
+    <div class="main">
+        <div id="carty"></div>
+    <div id="info">
+        <button id="out" style="font-weight: bolder;">CHECKOUT</button>
+        <div id="dprice">
+            <div style="display: flex;">
+                <input type="text" name="" id="coupon" placeholder="Enter a Coupon" ><p style="border:1px solid black;height:25px;width: 13%;padding-top:5px;padding-left: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-left: 0;color: #0a244a;">APPLY</p> 
+            </div>
+            <H5>PRICE DETAILS</H5>
+            <div id="price" style="display: flex;justify-content: space-between;">
+                <p>Price</p><p id="pric"></p>
+            </div>
+            <div  style="display: flex;justify-content: space-between;">
+                <p>Delivery Charges</p><p style="color: green;">FREE</p>
+            </div>
+        </div>
     </div>
-    <br><br><br><br><br><br><br><br><br>
-    
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
     <footer class="footer">
         <div class="con">
             <div class="row">
@@ -129,23 +148,98 @@
 </html>
 
 <script>
-    // mdata=JSON.parse(localStorage.getItem("m-data"))||[]
+    p=document.getElementById("pric")
+    mdata=JSON.parse(localStorage.getItem("m-data"))||[]
     sdata=JSON.parse(localStorage.getItem("s-data"))||[]
     con=document.getElementById("carty")
+    check=document.getElementById("out")
+
+    sum=[]
     display=()=>{
-    sdata.forEach(element=>{
-        pro=document.createElement("div")
+    sdata.forEach((element,index)=>{
+        pro=document.createElement("button")
         con.append(pro)
         name1=document.createElement("h2")
-        name1.innerText=element.name1
+        name1.innerText=element.name
         image=document.createElement("img")
-        image.setAttribute("src",element.image)
+        image.setAttribute("src",element.img)
         price=document.createElement("h3")
-        price.innerText=element.price
+        price.innerText="₹"+element.price
+        sum.push(element.price)
         category=document.createElement("p")
-        category.innerText=element.category
-        pro.append(image,name1,price)
+        category.innerText=element.rating
+        remove=document.createElement("button")
+        remove.innerText="Remove"
+        remove.style.marginRight="20px"
+        remove.style.color="blue"
+        remove.onclick=()=>{
+            sdata.splice(index,1)
+            localStorage.setItem("s-data",JSON.stringify(sdata))
+            window.location.reload(true)
+            }
+        plus=document.createElement("button")
+        span=document.createElement("span")
+        span.innerText=1
+        plus.innerText="+"
+        minus=document.createElement("button")
+        minus.innerText="-"
+        wish=document.createElement("button")
+        wish.style.color="blue"
+        wish.innerText="Add to Wishlist"
+        pro.append(image,name1,price,plus,span,minus,remove,wish)
     })
     }
     display()
+    display2=()=>{
+    mdata.forEach((element,index)=>{
+        pro=document.createElement("button")
+        con.append(pro)
+        name1=document.createElement('h2')
+        name1.innerText=element.name
+        image=document.createElement("img")
+        image.setAttribute("src",element.img)
+        image.style.width="230px"
+        price=document.createElement('h3')
+        price.innerText="₹"+element.price
+        sum.push(Number(element.price))
+        aricle=document.createElement("p")
+        aricle.innerText=element.article
+        pin=document.createElement('h4')
+        pin.innerText=element.pin
+        remove=document.createElement("button")
+        remove.innerText="Remove"
+        remove.style.marginRight="20px"
+        remove.style.color="blue"
+        remove.onclick=()=>{
+            mdata.splice(index,1)
+            localStorage.setItem("m-data",JSON.stringify(mdata))
+            window.location.reload(true)
+            }
+            wish=document.createElement("button")
+        wish.style.color="blue"
+        wish.innerText="Add to Wishlist"
+        plus=document.createElement("button")
+        span=document.createElement("span")
+        span.innerText=1
+        plus.innerText="+"
+        minus=document.createElement("button")
+        minus.innerText="-"
+        pro.append(image,name1,price,plus,span,minus,remove,wish)
+        })
+    }
+    display2()
+    total=document.getElementById("total")
+    total.innerText=sdata.length+mdata.length
+    check.onclick=()=>{
+        alert("Thanks for Shopping! Order Placed" )
+        window.localStorage.removeItem('m-data');
+        window.localStorage.removeItem('s-data');
+        window.location.reload(true)
+    }
+    add=0
+    console.log(sum);
+    for (let index = 0; index < sum.length; index++) {
+    add+=sum[index]
+    }
+    p.innerText="₹"+add
 </script>

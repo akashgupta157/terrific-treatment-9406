@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <nav id="nav2" style="position: sticky;top:0px;">
+    <nav id="nav2" style="position: sticky;top:0px;z-index: 100;">
         <button style="border: 0;background-color: #E42529;padding-bottom: 5px;"><a href="./index.html"><img src="./img/Screenshot (128).png" alt="" width="150px"> </a></button>
         <form action="">
             <input style="width: 100%;font-size: 95%;" type="text" placeholder="Find your favorite products">
@@ -24,7 +24,7 @@
             <a href="./index.html">Sign Out</a>
         </div>
     </nav>
-    <nav id="nav3" style="position: sticky;top:77px;">
+    <nav id="nav3" style="position: sticky;top:77px;z-index: 100;">
         <div class="menu">
             <button class="button">MOBILES & TABLETS</button>
             <div class="drop">
@@ -47,8 +47,21 @@
     </nav>
 
     <div id="bag">
-        <div style="margin-top: 100px;margin-bottom: 50px;">
-            <img id="img" src="https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NzA3M3xpbWFnZS9qcGVnfGltYWdlcy9oNGEvaDQ1Lzk4OTA1NDQ3MTM3NTguanBnfGEzYzVkZjMzYjY4NjE0MDE2YTEzY2M1MWRiZDUyZjJjNGM2MWVkYzJlNzU4Zjk0NGY0Y2Y3NjE5Y2RiMWQzMjg" width="400px" alt="">
+        <div class="main">
+            <div class="track">
+                <ul>
+                    <li id="slide1"><img id="img" src="https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NzA3M3xpbWFnZS9qcGVnfGltYWdlcy9oNGEvaDQ1Lzk4OTA1NDQ3MTM3NTguanBnfGEzYzVkZjMzYjY4NjE0MDE2YTEzY2M1MWRiZDUyZjJjNGM2MWVkYzJlNzU4Zjk0NGY0Y2Y3NjE5Y2RiMWQzMjg" width="400px" style="margin-top:100px;" alt=""></li>
+                    <!-- <li id="slide2"><img src="https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-2-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w4NTQ5MXxpbWFnZS9qcGVnfGltYWdlcy9oZWQvaGE4Lzk4OTA1NDUwNDE0MzguanBnfDdhMWE0ZWJhODY2ZjU0MzY5YmI5NjQ0YmFjNzhiYjYxNzAxOWE4MjZhMzUxZDAwZWJhOGMzYWJlZTI0OTg3ZmU" alt=""></li>
+                    <li id="slide3"><img src="https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-3-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxOTI1NjF8aW1hZ2UvanBlZ3xpbWFnZXMvaDZlL2gxMi85ODkwNTQ1MzY5MTE4LmpwZ3xkZmVmMjFlNjQ5MmRiOTliMjU5ZGJlZjE1NTFlYzEwOGM2YjY1NTQyZmEzN2NjZGE2Nzk2MTc3NGQ2YWJmZGY5" alt=""></li>
+                    <li id="slide4"><img src="https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-5-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyMTk1MjF8aW1hZ2UvanBlZ3xpbWFnZXMvaDZkL2gwMS85ODkwNTQ2MDI0NDc4LmpwZ3xjOGMyOWMyNjY4YmJjZTY3ODg5ZmM0N2Q3NGY3OWE3ODA5MmNmZDlmNjhmNmRlZWU5NTg3MDUyMjc0ODgxMmM2" alt=""></li> -->
+                </ul>
+            </div>
+            <!-- <div class="slide">
+                <a href="#slide1"><img src="https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NzA3M3xpbWFnZS9qcGVnfGltYWdlcy9oNGEvaDQ1Lzk4OTA1NDQ3MTM3NTguanBnfGEzYzVkZjMzYjY4NjE0MDE2YTEzY2M1MWRiZDUyZjJjNGM2MWVkYzJlNzU4Zjk0NGY0Y2Y3NjE5Y2RiMWQzMjg" alt=""></a>
+                <a href="#slide2"><img src="https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-2-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w4NTQ5MXxpbWFnZS9qcGVnfGltYWdlcy9oZWQvaGE4Lzk4OTA1NDUwNDE0MzguanBnfDdhMWE0ZWJhODY2ZjU0MzY5YmI5NjQ0YmFjNzhiYjYxNzAxOWE4MjZhMzUxZDAwZWJhOGMzYWJlZTI0OTg3ZmU" alt=""></a>
+                <a href="#slide3"><img src="https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-3-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxOTI1NjF8aW1hZ2UvanBlZ3xpbWFnZXMvaDZlL2gxMi85ODkwNTQ1MzY5MTE4LmpwZ3xkZmVmMjFlNjQ5MmRiOTliMjU5ZGJlZjE1NTFlYzEwOGM2YjY1NTQyZmEzN2NjZGE2Nzk2MTc3NGQ2YWJmZGY5" alt=""></a>
+                <a href="#slide4"><img src="https://www.reliancedigital.in/medias/Apple-iPhone-14-Plus-Mobile-Phone-493177770-i-5-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyMTk1MjF8aW1hZ2UvanBlZ3xpbWFnZXMvaDZkL2gwMS85ODkwNTQ2MDI0NDc4LmpwZ3xjOGMyOWMyNjY4YmJjZTY3ODg5ZmM0N2Q3NGY3OWE3ODA5MmNmZDlmNjhmNmRlZWU5NTg3MDUyMjc0ODgxMmM2" alt=""></a>
+            </div> -->
         </div>
         <div id="desc" style="margin-top: 10px;margin-bottom: 50px;">
             <p id="article" style="margin-top: 20px;margin-bottom: 10px;">Article ID: 493177770</p>
@@ -87,7 +100,7 @@
             <div style="margin-left: 20px">
                 <div style="display: flex;;margin-top: 20px;margin-bottom: 10px;">
                     <p style="font-size: 15px;margin-top: 10px;">MRP:</p>
-                    <h2 id="price" style="color:#003380;margin-left: 5px;">₹99,900.00</h2>
+                    <h2 style="color:#003380;margin-left: 5px;">₹</h2><h2 id="price" style="color:#003380;">99900</h2>
                 </div>
                 <p>(Inclusive of all taxes)</p>
                 <p>EMIs (Credit Cards) from ₹4796.49/month | <a style="text-decoration: none;" href="#">View Plans</a> </p>
@@ -183,6 +196,7 @@
     img=document.getElementById("img").src
     button=document.getElementById("a")
     pin=document.getElementById("b")
+    console.log(price.innerText)
     button.onclick=()=>{
         let Data={
             img:img,
@@ -193,6 +207,7 @@
         }
         mdata.push(Data);
         localStorage.setItem("m-data",JSON.stringify(mdata))
+        alert("Product Added to Cart")
     }
     mdata=JSON.parse(localStorage.getItem("m-data"))||[]
 </script>

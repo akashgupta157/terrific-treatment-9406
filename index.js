@@ -27,12 +27,12 @@ setInterval(() => {
     slide.style.transform = "translateX(0px)";
     prev.classList.add('active');
     next.classList.remove('active');
-}, 5000);
+}, 3000);
 setInterval(() => {
     slide.style.transform = "translateX(-100%)";
     next.classList.add('active');
-    prev.classList.add('active');
-}, 10000);
+    prev.classList.remove('active');
+}, 6000);
 
 var slide1 = document.getElementById("slider1");
         var btn11 = document.getElementById('btn11');
@@ -147,6 +147,7 @@ var slide1 = document.getElementById("slider1");
         }, 9000);
 
         
+
 
 
 

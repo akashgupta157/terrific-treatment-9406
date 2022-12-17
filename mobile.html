@@ -11,10 +11,10 @@
 
 </head>
 <body>
-    <nav id="nav2" style="position: sticky;top:0px;">
-        <button style="border: 0;background-color: #E42529;padding-bottom: 5px;"><a href="./index.html"><img src="./img/Screenshot (128).png" alt="" width="150px"> </a></button>
+    <nav id="nav2" style="position: sticky;top:0px;z-index: 100;">
+        <button style="border: 0;background-color: #E42529;padding-bottom: 5px;"><a href="./home.html"><img src="./img/Screenshot (128).png" alt="" width="150px"> </a></button>
         <form action="">
-            <input style="width: 100%;font-size: 95%;" type="text" placeholder="Find your favorite products">
+            <input style="width: 100%;font-size: 95%;" type="text" placeholder="Find your favorite products" id="search">
             <button><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-18.png" alt="" width="15px"></button>
         </form>
         <div id="wel" style="width:10%;">
@@ -24,7 +24,7 @@
             <a href="./index.html">Sign Out</a>
         </div>
     </nav>
-    <nav id="nav3" style="position: sticky;top:77px;">
+    <nav id="nav3" style="position: sticky;top:77px;z-index: 100;">
         <div class="menu">
             <button class="button">MOBILES & TABLETS</button>
             <div class="drop">
@@ -45,6 +45,38 @@
         <button>PERSONAL CARE</button>
         <button>ACCESSORIES</button>
     </nav>
+    <div class="slider1">
+        <div class="slider-box">
+            <div id="slider1">
+                <img src="https://www.reliancedigital.in/medias/Redmi-Smartphones-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNjg1MjN8aW1hZ2UvanBlZ3xpbWFnZXMvaDg5L2gxOS85OTI2Mzk5MzkzODIyLmpwZ3wzOWNiZTEyMzJlMzM3ZDIyYzdjYWE4ODMzY2QyNmI0NjFhMGRkYTc1ZmIzZjY1NGU0NDZhZDUzOTAzZjkwYjY5" alt="">
+                <img src="https://www.reliancedigital.in/medias/Motorola-G71-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNDkwOTV8aW1hZ2UvanBlZ3xpbWFnZXMvaGNjL2hlYS85OTI2MzkyOTcxMjk0LmpwZ3xiNDczZTM2YTMwZGI3YzFhZWRhNzQxYmZhYzQ0MmJjOTYxNzViNjcwOTQwMDM2NjkxZWUxNTZiMDkxZDZmZTgz" alt="">
+                <img src="https://www.reliancedigital.in/medias/iPhone14-Buy-now-CLP-Banner-15-09-2022.jpg?context=bWFzdGVyfGltYWdlc3w5OTQ1MHxpbWFnZS9qcGVnfGltYWdlcy9oMTYvaGM1Lzk5MDk3NTM2NzU4MDYuanBnfDNjOWU0YWU0ODQ3MDNkOWQ4Y2Y5MDg4NWFkYjM2ZDkwZjViZTZhYWUyMDlkZTVhZjk0OGI4Y2MxOGU1NGYzZDQ" alt="">
+                <img src="https://www.reliancedigital.in/medias/Samsung-M13-5G-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNjY2Mzh8aW1hZ2UvanBlZ3xpbWFnZXMvaGIyL2hjNi85OTI5ODExNzIyMjcwLmpwZ3w2OWYzNmQ4MmJkNmQ1YWZhOGUzNWMyNGYyNzMxNWE0YmI4YWEwZTMyM2YyZmNiYTEwNjJlMDQzYzVlNWQ3ZmFh" alt="">
+            </div>
+            <div class="indicators">
+                <span id="btn11" class="active"></span>
+                <span id="btn21"></span>
+                <span id="btn31"></span>
+                <span id="btn41"></span>
+            </div>
+        </div>
+    </div> 
+    <div id="qp">
+        <select name="sort" id="sort">
+            <option value="Featured">Sort by: Featured</option>
+            <option value="LowtoHigh">Sort by: Price: Low to High</option>
+            <option value="HightoLow">Sort by: Price: High to Low</option>
+        </select>
+        <select name="BRAND" id="filter">
+            <option value="">BRAND</option>
+            <option value="Apple">Apple</option>
+            <option value="Mi">Mi</option>
+            <option value="Realme">Realme</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Motorola">Motorola</option>
+            <option value="OPPO">OPPO</option>
+        </select>
+    </div>
 
     <div id="container">
         <!-- Here Append All the Products  -->
@@ -129,17 +161,48 @@
 </html>
 
 <script>
-    let fetcheddata=[]
-    function fetchdata() {
+    let fech=[]
+    let filert=document.getElementById("filter")
+    filter.onchange=()=>{
+        let filtered=fech.filter((element)=>{
+            if (element.brand===filter.value) {
+                return true
+            }else{
+                return false
+            }
+        })
+        display(filtered)
+    }
+    let sort=document.getElementById("sort")
+    sort.onchange=()=>{
+        let selected = sort.value;
+        if (selected == "HightoLow") {
+            fech.sort((a, b) => b.price - a.price);
+            display(fech);
+        } else {
+            fech.sort((a, b) => a.price - b.price);
+            display(fech);
+        }
+    }
+    let search=document.getElementById("search")
+    search.oninput=()=>{
+        let val = search.value;
+        let newData = fech.filter(function (elem) {
+            return elem.brand.toLowerCase().includes(val.toLowerCase());
+            return elem.name.toLowerCase().includes(val.toLowerCase());
+        });
+        display(newData);
+    }
+
     fetch("./mobile.json")
     .then(res=>res.json())
     .then(json=>{
-    fetcheddata=json
-    display(json)})
+        fech=json
+        display(json)})
     .catch(error=>console.log(error))
-    }fetchdata()
     con=document.getElementById("container") 
     display=(data)=>{
+    con.innerHTML=null
     data.forEach(element=>{
         pro=document.createElement("button")
         con.append(pro)
@@ -151,31 +214,102 @@
         price.innerText="₹"+element.price
         category=document.createElement("p")
         category.innerText=element.rating
-        id=document.createElement("p")
-        id.innerText=element.article
+        ide=document.createElement("p")
+        ide.innerText=element.article
         atc=document.createElement("button")
         atc.innerText="Add To Cart"
         atc.style.backgroundColor="red"
         atc.style.color="white"
-        console.log(name1.innerText);
         atc.onclick=()=>{
-            qw={
-                name1:name1.innerText,
-                image:image.src,
-                price:price.innerText,
-                id:id.innerText
+            sdata=JSON.parse(localStorage.getItem("s-data"))||[]
+            let already=false
+            for(i=0;i<sdata.length;i++){
+                if(sdata[i].id===element.id){
+                    already=true;
+                    break;
+                }
             }
-            sdata.push(qw)
-            localStorage.setItem("s-data",JSON.stringify(sdata))
+            if(already===true){
+                alert("Product Already in Cart")
+            }else{
+                sdata.push({...element,quantity:1})
+                localStorage.setItem("s-data",JSON.stringify(sdata))
+                alert("Product Added to Cart")
+            }
         }
-        sdata=JSON.parse(localStorage.getItem("s-data"))||[]
         image.onclick=()=>{
         window.location.href="./apple.html"
         }
         list=document.createElement("button")
         list.innerText="🤍Wishlist"
-        pro.append(category,image,name1,price,atc,list)
+        pro.append(image,name1,price,atc,list)
     })
-        
     }
+    var slide1 = document.getElementById("slider1");
+        var btn11 = document.getElementById('btn11');
+        var btn21 = document.getElementById('btn21');
+        var btn31 = document.getElementById('btn31');
+        var btn41 = document.getElementById('btn41');
+
+        setInterval(() => {
+            slide1.style.transform = "translateX(0px)";
+            btn11.classList.add('active');
+            btn21.classList.remove('active');
+            btn31.classList.remove('active');
+            btn41.classList.remove('active');
+        }, 2000);
+
+        setInterval(() => {
+            slide1.style.transform = "translateX(-100%)";
+            btn11.classList.remove('active');
+            btn21.classList.add('active');
+            btn31.classList.remove('active');
+            btn41.classList.remove('active');
+        }, 4000);
+            
+        setInterval(() => {
+            slide1.style.transform = "translateX(-200%)";
+            btn11.classList.remove('active');
+            btn21.classList.remove('active');
+            btn31.classList.add('active');
+            btn41.classList.remove('active');
+        }, 6000);
+            
+        setInterval(() => {
+            slide1.style.transform = "translateX(-300%)";
+            btn11.classList.remove('active');
+            btn21.classList.remove('active');
+            btn31.classList.remove('active');
+            btn41.classList.add('active');
+        }, 8000);
+            
+        
+        btn11.onclick = function () {
+            slide1.style.transform = "translateX(0px)";
+            btn11.classList.add('active');
+            btn21.classList.remove('active');
+            btn31.classList.remove('active');
+            btn41.classList.remive('active');
+        };
+        btn21.onclick = function () {
+            slide1.style.transform = "translateX(-100%)";
+            btn11.classList.remove('active');
+            btn21.classList.add('active');
+            btn31.classList.remove('active');
+            btn41.classList.remove('active');
+        };
+        btn31.onclick = function () {
+            slide1.style.transform = "translateX(-200%)";
+            btn11.classList.remove('active');
+            btn21.classList.remove('active');
+            btn31.classList.add('active');
+            btn41.classList.remove('active');
+        };
+        btn41.onclick = function () {
+            slide1.style.transform = "translateX(-300%)";
+            btn11.classList.remove('active');
+            btn21.classList.remove('active');
+            btn31.classList.remove('active');
+            btn41.classList.add('active');
+        };
 </script>

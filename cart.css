@@ -87,6 +87,16 @@ form button,form input{
     background-color:#E42529 ; 
     cursor: pointer;
 }
+#nav4{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    /* border: 2px solid black; */
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 58.5%;
+    padding: 10px 0px 10px 15px;
+    display: flex;
+}
+
 .drop{
     display: none;
     position: absolute;
@@ -154,3 +164,91 @@ ul{
     
 }
 /* ================================================================CARD PAGE========================================================================== */
+#carty{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* background-color:#EEEEEE; */
+    width: 60%;
+}
+#carty>button{
+    margin-top: 20px;
+    width:300px;
+    background: transparent;
+    outline: 0;
+    border: 0;
+    margin-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+#carty>button:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.main{
+    display: flex;
+}
+#info #dprice{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 370px;
+    margin-top: 20px;
+    padding: 15px 15px 30px 15px ;
+}
+#info{
+    margin-left: 1100px;
+    position:fixed;
+}
+#info button{
+    border: 0;
+    background-color: red;
+    color: #EEEEEE;
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+}
+#info button:hover{
+    background-color: #E42529;
+}
+#carty>button button{
+    width: 40%;
+    margin: auto;
+    margin-bottom: 10px;
+    background: transparent;
+    border: 0;
+    margin-top: 10px;
+    font-size: 15px;
+}
+#carty>button button:hover{
+    color: red;
+}
+#coupon{
+    width: 250px;
+    border:1px solid black;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+@media only screen and (max-width:1409px) and ( min-width: 889px) {
+    #carty{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 50%;
+    }
+    #carty>button{
+        margin-top: 20px;
+        width:255px;
+        background: transparent;
+        outline: 0;
+        border: 0;
+        margin-left: 20px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    }
+    #carty img{
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+    #info{
+        margin-left: 900px;
+        position:fixed;
+    }
+}
