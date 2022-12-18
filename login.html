@@ -31,14 +31,14 @@
         </form>
         <div style="width:9%;display:flex;justify-content: space-around;">
             <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-            <a href="./cart.html">Cart |</a>
+            <a href="#" id="aa">Cart |</a>
             <i class="fa-solid fa-pen"></i>
             <a href="./register.html">Sign in</a>
         </div>
     </nav>
     <nav id="nav3"  style="position: sticky;top: 77px;;z-index: 100;">
         <div class="menu">
-            <button class="button">MOBILES & TABLETS</button>
+            <button class="button">MOBILES & TABLETS<i class="fa-solid fa-chevron-down"></i></button>
             <div class="drop">
                 <a href="./mobile.html">Smartphones</a>
                 <a href="">Wearable Technology</a>
@@ -48,14 +48,14 @@
                 <a href="">Power Banks</a>
             </div>
         </div>
-        <button>TELEVISIONS</button>
-        <button>AUDIO</button>
-        <button>HOME APPLIANCES</button>
-        <button>COMPUTERS</button>
-        <button>CAMERAS</button>
-        <button>KITCHEN APPLIANCES</button>
-        <button>PERSONAL CARE</button>
-        <button>ACCESSORIES</button>
+        <button>TELEVISIONS<i class="fa-solid fa-chevron-down"></i></button>
+        <button>AUDIO<i class="fa-solid fa-chevron-down"></i></button>
+        <button>HOME APPLIANCES<i class="fa-solid fa-chevron-down"></i></button>
+        <button>COMPUTERS<i class="fa-solid fa-chevron-down"></i></button>
+        <button>CAMERAS<i class="fa-solid fa-chevron-down"></i></button>
+        <button>KITCHEN APPLIANCES<i class="fa-solid fa-chevron-down"></i></button>
+        <button>PERSONAL CARE<i class="fa-solid fa-chevron-down"></i></button>
+        <button>ACCESSORIES<i class="fa-solid fa-chevron-down"></i></button>
     </nav>
     <div class="con1">
         <div id="head1">
@@ -160,6 +160,10 @@ let form=document.getElementById("form1")
 let email=document.getElementById("email")
 let password=document.getElementById("password")
 let button=document.getElementById("bnt")
+aa=document.getElementById("aa")
+        aa.onclick=()=>{
+            alert("First Login")
+        }
 data=JSON.parse(localStorage.getItem("account-data"))||[]
 button.onclick=()=>{
     for (let i = 0; i < data.length; i++) {

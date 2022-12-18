@@ -30,14 +30,14 @@
         </form>
         <div style="width:9%;display:flex;justify-content: space-around;">
             <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-            <a href="./cart.html">Cart |</a>
+            <a href="#" id="aa">Cart |</a>
             <i class="fa-solid fa-user"></i>
             <a href="./login.html">Login</a>
         </div>
     </nav>
     <nav id="nav3"  style="position: sticky;top: 77px;;z-index: 100;">
         <div class="menu">
-            <button class="button">MOBILES & TABLETS</button>
+            <button class="button">MOBILES & TABLETS<i class="fa-solid fa-chevron-down"></i></button>
             <div class="drop">
                 <a href="./mobile.html">Smartphones</a>
                 <a href="">Wearable Technology</a>
@@ -47,14 +47,14 @@
                 <a href="">Power Banks</a>
             </div>
         </div>
-        <button>TELEVISIONS</button>
-        <button>AUDIO</button>
-        <button>HOME APPLIANCES</button>
-        <button>COMPUTERS</button>
-        <button>CAMERAS</button>
-        <button>KITCHEN APPLIANCES</button>
-        <button>PERSONAL CARE</button>
-        <button>ACCESSORIES</button>
+        <button>TELEVISIONS<i class="fa-solid fa-chevron-down"></i></button>
+        <button>AUDIO<i class="fa-solid fa-chevron-down"></i></button>
+        <button>HOME APPLIANCES<i class="fa-solid fa-chevron-down"></i></button>
+        <button>COMPUTERS<i class="fa-solid fa-chevron-down"></i></button>
+        <button>CAMERAS<i class="fa-solid fa-chevron-down"></i></button>
+        <button>KITCHEN APPLIANCES<i class="fa-solid fa-chevron-down"></i></button>
+        <button>PERSONAL CARE<i class="fa-solid fa-chevron-down"></i></button>
+        <button>ACCESSORIES<i class="fa-solid fa-chevron-down"></i></button>
     </nav>
     <div class="con1">
         <div id="head1">
@@ -77,36 +77,13 @@
                 <input type="number" id="mobile" required="required"/>
                 <span>Mobile Number*</span>
             </div>
-            <button id="bnt"><a href="./login.html">PROCEED</a></button>
+            <button id="bnt">PROCEED</button>
             <div class="al" style="margin-bottom: 40px;">
                 <span>Already Registered?</span>
                 <button style="border:0;background: none;"><a href="./login.html">LOGIN</a></button>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br><br><br><br><br>
 
     <footer class="footer">
@@ -192,7 +169,11 @@
     let password=document.getElementById("password")
     let name=document.getElementById("name")
     let mobile=document.getElementById("mobile")
-    let button=document.getElementById("bnt")  
+    let button=document.getElementById("bnt") 
+    aa=document.getElementById("aa")
+        aa.onclick=()=>{
+            alert("First Login")
+        }
     button.onclick=()=>{
     let formData = {
         name:name.value,
@@ -202,6 +183,16 @@
     } 
     data.push(formData);
     localStorage.setItem("account-data",JSON.stringify(data))
+    if(name.value.length<3 && name.value.length>25 && name.value.length===0){
+        alert("Username must be between 3 and 25 characters")
+    }else if(password.value.length<6 ){
+        alert("Password must has at least 6 characters")
+    } else if(mobile.value.length===10){
+        alert("Invalid Mobile Number")
+    }else{
+        alert("Account Created Sucessfully")
+        window.location.href="./login.html"
+    }
 }
 data=JSON.parse(localStorage.getItem("account-data"))||[]
 </script>

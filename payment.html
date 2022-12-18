@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    <link rel="stylesheet" href="./cart.css">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./payment.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/Screenshot (128).png">
 
 </head>
 <body>
-    <nav id="nav2" style="position: sticky;top:0px;">
+    <nav id="nav2" style="position: sticky;top:0px;z-index: 1;">
         <button style="border: 0;background-color: #E42529;padding-bottom: 5px;"><a href="./home.html"><img src="./img/Screenshot (128).png" alt="" width="150px"> </a></button>
-        <form action="">
+        <form id="form" action="">
             <input style="width: 100%;font-size: 95%;" type="text" placeholder="Find your favorite products">
             <button><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-18.png" alt="" width="15px"></button>
         </form>
         <div id="wel" style="width:10%;">
             <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-            <a href="#">Cart |</a>
+            <a href="./cart.html">Cart |</a>
             <i class="fa-solid fa-right-from-bracket"></i>
             <a href="./index.html">Sign Out</a>
         </div>
     </nav>
-    <nav id="nav3" style="position: sticky;top:77px;">
+    <nav id="nav3" style="position: sticky;top:77px;z-index: 1;">
         <div class="menu">
             <button class="button">MOBILES & TABLETS<i class="fa-solid fa-chevron-down"></i></button>
             <div class="drop">
@@ -45,30 +45,34 @@
         <button>PERSONAL CARE<i class="fa-solid fa-chevron-down"></i></button>
         <button>ACCESSORIES<i class="fa-solid fa-chevron-down"></i></button>
     </nav>
-    <nav id="nav4">
-        <h3>My Cart</h3>
-    <p style="margin-left: 10px;">(<p style="margin-right:5px;margin-left: 2px;" id="total"></p> Items)</p>
-        
-    </nav>
-    <div class="main">
-        <div id="carty"></div>
-    <div id="info">
-        <button id="out" style="font-weight: bolder;">CHECKOUT</button>
-        <div id="dprice">
-            <div style="display: flex;">
-                <input type="text" name="" id="coupon" placeholder="Enter a Coupon" ><p style="border:1px solid black;height:25px;width: 13%;padding-top:5px;padding-left: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-left: 0;color: #0a244a;">APPLY</p> 
-            </div>
-            <H5>PRICE DETAILS</H5>
-            <div id="price" style="display: flex;justify-content: space-between;">
-                <p>Price</p><p id="pric"></p>
-            </div>
-            <div  style="display: flex;justify-content: space-between;">
-                <p>Delivery Charges</p><p style="color: green;">FREE</p>
-            </div>
+    <div style="display: flex;">
+        <form action="" id="ww">
+        <h3 style="padding:20px 0px 5px 35px;">Add Address<i style="margin-left: 3px;" class="fa-regular fa-address-card"></i></h3>
+        <div id="al">
+        <input type="text" placeholder="Enter Your Name*">
+        <input type="text" placeholder="Enter Your Address*">
+        <input type="number" placeholder="Enter Pincode*">
+        <input type="text" placeholder="Enter Your City*">
+        <input type="number" placeholder="Enter Your Mobile Number*">
+        <input type="submit" id="ad" value="Add" style="width: 20%;font-weight: bolder;color: aliceblue;background-color:#E42529;border: 0;margin-bottom:50px;">
         </div>
+    </form>
+    <form action="" id="ww" style="margin-left: 250px;">
+        <h3 style="margin-left:100px;margin-top: 20px;"><script>add= localStorage.getItem("add")
+        document.write("Total Amount - ₹"+add);
+        </script></h3>
+        <h4 style="padding:20px 0px 5px 35px;">Enter Your Card Details:</h3>
+        <div id="al">
+            <input type="number" placeholder="Enter Your Card Number*" id="card">
+            <small style="margin-left: 35px ;">Enter Card Expiry Date*:</small>
+            <input type="date" placeholder="" id="data">
+            <input type="number" placeholder="Enter CVV*" id="cvv">
+            <input type="button" id="pay" style="width: 20%;height: 30px;border-radius:5px;margin: auto;font-weight: bolder;color: aliceblue;background-color:#0a244a;border: 0;margin-bottom:50px;" value="PAY">
+        </div>
+    </form>
+    <button ></button> 
     </div>
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
     <footer class="footer">
         <div class="con">
             <div class="row">
@@ -148,101 +152,21 @@
 </html>
 
 <script>
-    p=document.getElementById("pric")
-    mdata=JSON.parse(localStorage.getItem("m-data"))||[]
-    sdata=JSON.parse(localStorage.getItem("s-data"))||[]
-    con=document.getElementById("carty")
-    check=document.getElementById("out")
-
-    sum=[]
-    display=()=>{
-    sdata.forEach((element,index)=>{
-        pro=document.createElement("button")
-        con.append(pro)
-        name1=document.createElement("h2")
-        name1.innerText=element.name
-        image=document.createElement("img")
-        image.setAttribute("src",element.img)
-        price=document.createElement("h3")
-        price.innerText="₹"+element.price
-        sum.push(element.price)
-        category=document.createElement("p")
-        category.innerText=element.rating
-        remove=document.createElement("button")
-        remove.innerText="Remove"
-        remove.style.marginRight="20px"
-        remove.style.color="blue"
-        remove.onclick=()=>{
-            sdata.splice(index,1)
-            localStorage.setItem("s-data",JSON.stringify(sdata))
-            window.location.reload(true)
-            }
-        plus=document.createElement("button")
-        span=document.createElement("span")
-        span.innerText=1
-        plus.innerText="+"
-        minus=document.createElement("button")
-        minus.innerText="-"
-        wish=document.createElement("button")
-        wish.style.color="blue"
-        wish.innerText="Add to Wishlist"
-        pro.append(image,name1,price,plus,span,minus,remove,wish)
-    })
+    pay=document.getElementById("pay")
+    card=document.getElementById("card")
+    cvv=document.getElementById("cvv")
+    ad=document.getElementById("ad")
+    ad.onsubmit=(e)=>{
+        e.preventDefault
     }
-    display()
-    display2=()=>{
-    mdata.forEach((element,index)=>{
-        pro=document.createElement("button")
-        con.append(pro)
-        name1=document.createElement('h2')
-        name1.innerText=element.name
-        image=document.createElement("img")
-        image.setAttribute("src",element.img)
-        image.style.width="230px"
-        price=document.createElement('h3')
-        price.innerText="₹"+element.price
-        sum.push(Number(element.price))
-        aricle=document.createElement("p")
-        aricle.innerText=element.article
-        pin=document.createElement('h4')
-        pin.innerText=element.pin
-        remove=document.createElement("button")
-        remove.innerText="Remove"
-        remove.style.marginRight="20px"
-        remove.style.color="blue"
-        remove.onclick=()=>{
-            mdata.splice(index,1)
-            localStorage.setItem("m-data",JSON.stringify(mdata))
-            window.location.reload(true)
-            }
-            wish=document.createElement("button")
-        wish.style.color="blue"
-        wish.innerText="Add to Wishlist"
-        plus=document.createElement("button")
-        span=document.createElement("span")
-        span.innerText=1
-        plus.innerText="+"
-        minus=document.createElement("button")
-        minus.innerText="-"
-        pro.append(image,name1,price,plus,span,minus,remove,wish)
-        })
+    pay.onclick=(e)=>{
+        e.preventDefault
+        if (card.value.length===16 && cvv.value.length===3 ) {
+        alert("Payment Done. Order Placed!!")
+        }else{
+            alert("Enter Correct Card Details ")
+        }
     }
-    display2()
-    total=document.getElementById("total")
-    total.innerText=sdata.length+mdata.length
-    check.onclick=()=>{
-        window.location.replace("./payment.html")
-        // alert("Thanks for Shopping! Order Placed" )
-        // window.localStorage.removeItem('m-data');
-        // window.localStorage.removeItem('s-data');
-        // window.location.reload(true)
-    }
-    add=0
-    console.log(sum);
-    for (let index = 0; index < sum.length; index++) {
-    add+=sum[index]
-    }
-    p.innerText="₹"+add
-    localStorage.setItem("add",add)
     
+
 </script>

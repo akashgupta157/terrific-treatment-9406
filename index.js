@@ -147,6 +147,10 @@ var slide1 = document.getElementById("slider1");
         }, 9000);
 
         
+        aa=document.getElementById("aa")
+        aa.onclick=()=>{
+            alert("First Login")
+        }
 
 
 
