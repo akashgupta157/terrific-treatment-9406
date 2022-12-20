@@ -60,15 +60,19 @@
             </div>
             <H5>PRICE DETAILS</H5>
             <div id="price" style="display: flex;justify-content: space-between;">
-                <p>Price</p><p id="pric"></p>
+            <p>Price</p><p id="pric"></p>
             </div>
-            <div  style="display: flex;justify-content: space-between;">
+            <div style="display: flex;justify-content: space-between;">
                 <p>Delivery Charges</p><p style="color: green;">FREE</p>
             </div>
+            <div id="price" style="display: flex;justify-content: space-between;margin-top: 30px;">
+                <h4>AMOUNT PAYABLE</h4><h4 style="color: darkblue;" id="pri"></h4>
+            </div>
         </div>
+        <p style="color: gray;font-size: 12px;">Safe and Secure Payments. Easy returns. 100% Authentic products.</p>
     </div>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer class="footer">
         <div class="con">
             <div class="row">
@@ -149,6 +153,7 @@
 
 <script>
     p=document.getElementById("pric")
+    pe=document.getElementById("pri")
     mdata=JSON.parse(localStorage.getItem("m-data"))||[]
     sdata=JSON.parse(localStorage.getItem("s-data"))||[]
     con=document.getElementById("carty")
@@ -165,7 +170,6 @@
         image.setAttribute("src",element.img)
         price=document.createElement("h3")
         price.innerText="₹"+element.price
-        sum.push(element.price)
         category=document.createElement("p")
         category.innerText=element.rating
         remove=document.createElement("button")
@@ -178,14 +182,35 @@
             window.location.reload(true)
             }
         plus=document.createElement("button")
-        span=document.createElement("span")
-        span.innerText=1
         plus.innerText="+"
+        if (element.quantity<5) {
+        plus.onclick=()=>{
+            element.quantity++
+            localStorage.setItem("s-data",JSON.stringify(sdata))
+            window.location.reload()
+        }
+        }
+        span=document.createElement("span")
+        span.innerText=element.quantity
         minus=document.createElement("button")
         minus.innerText="-"
+        if (element.quantity>1) {
+            minus.onclick=()=>{
+            element.quantity--
+            localStorage.setItem("s-data",JSON.stringify(sdata))
+            window.location.reload()
+        }
+    }
+        sum.push(element.price*element.quantity)
         wish=document.createElement("button")
         wish.style.color="blue"
         wish.innerText="Add to Wishlist"
+        wish.onclick=()=>{
+            alert("Product added to wishlist")
+            sdata.splice(index,1)
+            localStorage.setItem("s-data",JSON.stringify(sdata))
+            window.location.reload(true)
+        }
         pro.append(image,name1,price,plus,span,minus,remove,wish)
     })
     }
@@ -198,10 +223,9 @@
         name1.innerText=element.name
         image=document.createElement("img")
         image.setAttribute("src",element.img)
-        image.style.width="230px"
+        image.style.width="299px"
         price=document.createElement('h3')
         price.innerText="₹"+element.price
-        sum.push(Number(element.price))
         aricle=document.createElement("p")
         aricle.innerText=element.article
         pin=document.createElement('h4')
@@ -214,16 +238,37 @@
             mdata.splice(index,1)
             localStorage.setItem("m-data",JSON.stringify(mdata))
             window.location.reload(true)
-            }
-            wish=document.createElement("button")
+        }
+        wish=document.createElement("button")
         wish.style.color="blue"
         wish.innerText="Add to Wishlist"
+        wish.onclick=()=>{
+            alert("Product added to wishlist")
+            mdata.splice(index,1)
+            localStorage.setItem("m-data",JSON.stringify(mdata))
+            window.location.reload(true)
+        }
         plus=document.createElement("button")
+        if (element.quantity<5) {
+            plus.onclick=()=>{
+            element.quantity++
+            localStorage.setItem("m-data",JSON.stringify(mdata))
+            window.location.reload()
+        }
+        }
         span=document.createElement("span")
-        span.innerText=1
+        span.innerText=element.quantity
         plus.innerText="+"
         minus=document.createElement("button")
         minus.innerText="-"
+        if (element.quantity>=2) {
+            minus.onclick=()=>{
+            element.quantity--
+            localStorage.setItem("m-data",JSON.stringify(mdata))
+            window.location.reload()
+        }
+        }
+        sum.push(Number(element.price)*element.quantity)
         pro.append(image,name1,price,plus,span,minus,remove,wish)
         })
     }
@@ -232,17 +277,13 @@
     total.innerText=sdata.length+mdata.length
     check.onclick=()=>{
         window.location.replace("./payment.html")
-        // alert("Thanks for Shopping! Order Placed" )
-        // window.localStorage.removeItem('m-data');
-        // window.localStorage.removeItem('s-data');
-        // window.location.reload(true)
     }
     add=0
-    console.log(sum);
     for (let index = 0; index < sum.length; index++) {
     add+=sum[index]
     }
     p.innerText="₹"+add
+    pe.innerText="₹"+add
     localStorage.setItem("add",add)
     
 </script>

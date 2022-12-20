@@ -149,54 +149,7 @@ ul{
 .column .social a:hover{
     color: wheat;
 }
-@media only screen and (max-width:1409px) and ( min-width: 889px){
-    /* .main{ */
-        /* width: 300px; 
-        border: 1px solid black;
-    }
-    .main .track ul{
-        position: relative;
-        list-style: none;
-        height: 400px;
-        width: 85%;
-        margin-top: 50px;
-        border: 1px solid black;
-    }
-    .main .track ul li{
-        position:absolute;
-        top: 10px;
-        left: 55px;
-        height: 400px;
-        opacity: 0;
-        transition:opacity .5s ease;
-        border: 1px solid black;
 
-    }
-    .main .track ul li:first-child{
-        opacity: 1;
-    }
-    .main .track ul li img{
-        height: 100%;
-        border: 1px solid black;
-
-    }
-    .slide{
-        grid-template-columns: repeat(4,1fr);
-        display: grid;
-        gap: 10px;
-        width: 400px;
-        margin-top: 50px;
-        border: 1px solid black;
-    }
-    .slide a img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .main .track ul li:target{
-        opacity: 1;
-    } */
-}
 /* ================================================================PRODUCT PAGE========================================================================== */
 #bag{
     display: grid;
@@ -230,44 +183,6 @@ ul{
     border-radius: 5px;
     font-weight: bold;
 }
-
-
-/* .main{
-    width: 550px;
+.small img{
+    width:105px;
 }
-.main .track ul{
-    position: relative;
-    list-style: none;
-    height: 400px;
-    width: 95%;
-    margin-top: 50px;
-}
-.main .track ul li{
-    position:absolute;
-    top: 10px;
-    left: 55px;
-    height: 400px;
-    opacity: 0;
-    transition:opacity .5s ease;
-}
-.main .track ul li:first-child{
-    opacity: 1;
-}
-.main .track ul li img{
-    height: 100%;
-}
-.slide{
-    grid-template-columns: repeat(4,1fr);
-    display: grid;
-    gap: 10px;
-    width: 500px;
-    margin-top: 50px;
-}
-.slide a img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.main .track ul li:target{
-    opacity: 1;
-} */

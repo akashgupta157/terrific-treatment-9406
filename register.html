@@ -182,14 +182,14 @@
         mobile:mobile.value
     } 
     data.push(formData);
-    localStorage.setItem("account-data",JSON.stringify(data))
     if(name.value.length<3 && name.value.length>25 && name.value.length===0){
         alert("Username must be between 3 and 25 characters")
     }else if(password.value.length<6 ){
         alert("Password must has at least 6 characters")
-    } else if(mobile.value.length===10){
-        alert("Invalid Mobile Number")
+    } else if(mobile.value.length!=10){
+        alert("Enter Valid Mobile Number")
     }else{
+        localStorage.setItem("account-data",JSON.stringify(data))
         alert("Account Created Sucessfully")
         window.location.href="./login.html"
     }
